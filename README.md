@@ -16,4 +16,28 @@ To create a bundle:
 bun run build
 ```
 
+You can also automatically recreate this bundle upon changes by running:
+
+```bash
+bun run watch
+```
+
+This will output the file `index.js` in the `build` folder. To test the script install [Tampermonkey](https://www.tampermonkey.net/) for Google Chrome and create a new userscript with the following contents:
+
+```js
+// ==UserScript==
+// @name        One-Box Search
+// @description Searching across TU Delft Library resources
+// @version     2025-02-18
+// @match       https://www.tudelft.nl/library/zoeken-4*
+// @require     file:///path-to-repository/build/index.js
+// ==/UserScript==
+```
+
+Replace `path-to-repository` for the full path to the cloned GitHub repository, e.g. `Users/username/Documents/GitHub/one-box-search/build/index.js`.
+
+Make sure to enable `Allow access to file URLs` for Tampermonkey under Manage Extensions > Tampermonkey > Details. See also the accepted answer to [this question](https://stackoverflow.com/questions/41212558/develop-tampermonkey-scripts-in-a-real-ide-with-automatic-deployment-to-openuser) on Stack Overflow.
+
+---
+
 This project was created using `bun init` in bun v1.2.2. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.

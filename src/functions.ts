@@ -1,4 +1,4 @@
-import { djehutyBaseUrl, doiBaseUrl } from "./constants";
+import { djehutyBaseUrl, djehutySearchBaseUrl, doiBaseUrl } from "./constants";
 
 export function fetchJson(url: string, body: any) {
   const method = body ? "POST" : "GET";
@@ -36,11 +36,17 @@ function createTypoRow(props: any) {
     `;
 }
 
-function createTypoResults(records: any[]) {
+function createTypoResults(records: any[], count: number, resultsUrl: string) {
   return /*html*/ `
     <div id="c1478060" class="t3ce frame-type-lookup_results">
       <div class="content-container">
-        ${records.map(createTypoRow).join("\n")}
+        ${count ? "Top 10 results" : "No results"}
+        ${count ? records.map(createTypoRow).join("\n") : ""} 
+        <div id="c1534097" class="t3ce frame-type-sitetud_singlebutton">
+          <a href="${resultsUrl}" class="btn btn--single align-center btn--royal_blue">
+            View all results
+          </a>
+        </div>
       </div>
     </div>
     `;
@@ -48,7 +54,11 @@ function createTypoResults(records: any[]) {
 
 export async function searchIn4tu(searchInput: string) {
   const records = await fetchJson(djehutyBaseUrl, { search_for: searchInput });
-  const typoResults = createTypoResults(records);
+  const typoResults = createTypoResults(
+    records.slice(0, 3),
+    records.length,
+    djehutySearchBaseUrl + searchInput
+  );
   const container = document.getElementById("search-results-4tu");
   if (container) {
     // Potential security risk?

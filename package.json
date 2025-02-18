@@ -9,6 +9,7 @@
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "build": "bun build ./index.ts --outdir ./build"
+    "build": "bun build ./index.ts --outdir ./build",
+    "watch": "bun build ./index.ts --outdir ./build --watch"
   }
 }

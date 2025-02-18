@@ -1,5 +1,6 @@
 // src/constants.ts
 var djehutyBaseUrl = "https://data.4tu.nl/v2/articles/search";
+var djehutySearchBaseUrl = "https://data.4tu.nl/search?search=";
 var doiBaseUrl = "https://doi.org/";
 
 // src/functions.ts
@@ -35,19 +36,25 @@ function createTypoRow(props) {
     </a>
     `;
 }
-function createTypoResults(records) {
+function createTypoResults(records, count, resultsUrl) {
   return `
     <div id="c1478060" class="t3ce frame-type-lookup_results">
       <div class="content-container">
-        ${records.map(createTypoRow).join(`
-`)}
+        ${count ? "Top 10 results" : "No results"}
+        ${count ? records.map(createTypoRow).join(`
+`) : ""} 
+        <div id="c1534097" class="t3ce frame-type-sitetud_singlebutton">
+          <a href="${resultsUrl}" class="btn btn--single align-center btn--royal_blue">
+            View all results
+          </a>
+        </div>
       </div>
     </div>
     `;
 }
 async function searchIn4tu(searchInput) {
   const records = await fetchJson(djehutyBaseUrl, { search_for: searchInput });
-  const typoResults = createTypoResults(records);
+  const typoResults = createTypoResults(records.slice(0, 3), records.length, djehutySearchBaseUrl + searchInput);
   const container = document.getElementById("search-results-4tu");
   if (container) {
     container.innerHTML = typoResults;
