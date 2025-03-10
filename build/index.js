@@ -39,8 +39,9 @@ function createTypoRow(props) {
 function createTypoResults(records, count, resultsUrl) {
   return `
     <div id="c1478060" class="t3ce frame-type-lookup_results">
+      ${count ? "Top 3 results" : "No results"}
+      <h2>4TU.ResearchData</h2>
       <div class="content-container">
-        ${count ? "Top 10 results" : "No results"}
         ${count ? records.map(createTypoRow).join(`
 `) : ""} 
         <div id="c1534097" class="t3ce frame-type-sitetud_singlebutton">
@@ -52,12 +53,24 @@ function createTypoResults(records, count, resultsUrl) {
     </div>
     `;
 }
+function createContainer(content) {
+  return `
+    <div class="grid-background--white grid-background--boxed">
+      <div class="row grid layout-0 grid--noPaddingBottom">
+        <div class="sm-12">
+          ${content}
+        </div>
+      </div>
+    </div>
+  `;
+}
 async function searchIn4tu(searchInput) {
   const records = await fetchJson(djehutyBaseUrl, { search_for: searchInput });
   const typoResults = createTypoResults(records.slice(0, 3), records.length, djehutySearchBaseUrl + searchInput);
-  const container = document.getElementById("search-results-4tu");
-  if (container) {
-    container.innerHTML = typoResults;
+  const container = createContainer(typoResults);
+  const row = document.getElementsByClassName("sm-12 md-6")[1];
+  if (row) {
+    row.innerHTML = container;
   }
 }
 

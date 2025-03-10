@@ -39,8 +39,9 @@ function createTypoRow(props: any) {
 function createTypoResults(records: any[], count: number, resultsUrl: string) {
   return /*html*/ `
     <div id="c1478060" class="t3ce frame-type-lookup_results">
+      ${count ? "Top 3 results" : "No results"}
+      <h2>4TU.ResearchData</h2>
       <div class="content-container">
-        ${count ? "Top 10 results" : "No results"}
         ${count ? records.map(createTypoRow).join("\n") : ""} 
         <div id="c1534097" class="t3ce frame-type-sitetud_singlebutton">
           <a href="${resultsUrl}" class="btn btn--single align-center btn--royal_blue">
@@ -52,6 +53,18 @@ function createTypoResults(records: any[], count: number, resultsUrl: string) {
     `;
 }
 
+function createContainer(content: string) {
+  return /*html*/ `
+    <div class="grid-background--white grid-background--boxed">
+      <div class="row grid layout-0 grid--noPaddingBottom">
+        <div class="sm-12">
+          ${content}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 export async function searchIn4tu(searchInput: string) {
   const records = await fetchJson(djehutyBaseUrl, { search_for: searchInput });
   const typoResults = createTypoResults(
@@ -59,11 +72,12 @@ export async function searchIn4tu(searchInput: string) {
     records.length,
     djehutySearchBaseUrl + searchInput
   );
-  const container = document.getElementById("search-results-4tu");
-  if (container) {
+  const container = createContainer(typoResults);
+  const row = document.getElementsByClassName("sm-12 md-6")[1];
+  if (row) {
     // Potential security risk?
     // https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML#security_considerations
     // https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page
-    container.innerHTML = typoResults;
+    row.innerHTML = container;
   }
 }
