@@ -86,7 +86,9 @@ export async function createResults(searchInput: string) {
     // https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page
     row.innerHTML = container;
   }
-  const resultDiv = document.getElementById("external-search-results");
+   const resultDiv = document.getElementById("external-search-results");
+
+  /* Previous version by Jules
   // Add results to container
   searchProviders.map(async (provider) => {
     const records = await provider.getRecords(searchInput);
@@ -102,4 +104,31 @@ export async function createResults(searchInput: string) {
       resultDiv?.appendChild(div);
     }
   });
+*/ 
+
+   // get what needs to be done...
+  const recordPromises = searchProviders.map(async (provider) => {
+    const records = await provider.getRecords(searchInput);
+    return { provider, records };
+  });
+  
+  // Wait for all queries, to all websites to resolve
+  Promise.all(recordPromises).then((results) => {
+    results.forEach(({ provider, records }) => {
+      if (records) {
+        const typoResults = createTypoResults(
+          provider.title,
+          records,
+          records.count,
+          provider.searchBaseUrl + searchInput
+        );
+        const div = document.createElement("div");
+        div.innerHTML = typoResults;
+        resultDiv?.appendChild(div);
+      }
+    });
+  });
+
+
+  
 }
