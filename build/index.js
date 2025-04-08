@@ -39,7 +39,7 @@ var providers_default = [
   },
   {
     title: "TU Delft Repository",
-    apiBaseUrl: "https://repository.tudelft.nl/tudelft/library/search?limit=10&search_term=",
+    apiBaseUrl: "https://repository.tudelft.nl/tudelft/library/search?limit=10&searchterm=",
     searchBaseUrl: "https://repository.tudelft.nl/search?search_term=",
     getRecords: function(query) {
       return fetchJson(this.apiBaseUrl + query).then((resp) => {
@@ -83,7 +83,7 @@ var providers_default = [
           href: "https://heritage.tudelft.nl/" + d.slug,
           date: d.topic_date ? d.topic_date[0] : undefined
         }));
-        normalizedResults.count = resp.out_of;
+        normalizedResults.count = resp.results[0].found;
         return normalizedResults;
       }).catch((err) => console.log(err));
     }
@@ -95,6 +95,7 @@ function fetchJson(url, body) {
   const method = body ? "POST" : "GET";
   const headers = new Headers;
   const options = { method, headers };
+  headers.append("Accept", "application/json");
   if (body) {
     headers.append("Content-Type", "application/json");
     options.body = JSON.stringify(body);
@@ -126,46 +127,35 @@ function createTypoRow(props) {
 }
 function createTypoResults(title, records, count, resultsUrl) {
   return `
-    <div class="t3ce frame-type-lookup_results">
-      ${records.length && count ? count + " results" : records.length ? "Top 3 results" : "No results"}
-      <h2>${title}</h2>
-      <div class="content-container">
-        ${records.length ? records.map(createTypoRow).join(`
+    <div class="t3ce frame-type-gridelements_pi1">
+      <div class="grid-background--white grid-background--boxed">
+        ${records.length && count ? count + " results" : records.length ? "Top 3 results" : "No results"}
+        <h2>${title}</h2>
+        <div class="content-container">
+          ${records.length ? records.map(createTypoRow).join(`
 `) : ""} 
-        <div class="t3ce frame-type-sitetud_singlebutton">
-          <a href="${resultsUrl}" class="btn btn--single align-center btn--royal_blue">
-            View all results
-          </a>
+          <div class="t3ce frame-type-sitetud_singlebutton">
+            <a href="${resultsUrl}" class="btn btn--single align-center btn--royal_blue">
+              View all results
+            </a>
+          </div>
         </div>
       </div>
     </div>
     `;
 }
-function createContainer() {
-  return `
-    <div class="grid-background--white grid-background--boxed">
-      <div class="row grid layout-0 grid--noPaddingBottom">
-        <div id="external-search-results" class="sm-12">
-          <!-- Content will be placed here -->
-        </div>
-      </div>
-    </div>
-  `;
-}
 async function createResults(searchInput) {
-  const container = createContainer();
-  const row = document.getElementsByClassName("sm-12 md-6")[1];
-  if (row) {
-    row.innerHTML = container;
-  }
-  const resultDiv = document.getElementById("external-search-results");
+  const grid = document.getElementsByClassName("multiRowGrid")[0];
   providers_default.map(async (provider) => {
     const records = await provider.getRecords(searchInput);
     if (records) {
       const typoResults = createTypoResults(provider.title, records, records.count, provider.searchBaseUrl + searchInput);
       const div = document.createElement("div");
+      div.className = "sm-6 md-6 lg-6";
       div.innerHTML = typoResults;
-      resultDiv?.appendChild(div);
+      if (grid) {
+        grid.appendChild(div);
+      }
     }
   });
 }
