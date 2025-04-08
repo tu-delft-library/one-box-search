@@ -40,6 +40,13 @@ Make sure to enable `Allow access to file URLs` for Tampermonkey under Manage Ex
 
 Visit the following URL to test the script: [https://www.tudelft.nl/library/zoeken-dev](https://www.tudelft.nl/library/zoeken-dev)
 
+## Todo
+
+- [ ] Bilingual results
+- [ ] Integrate Library result count in flex box
+- [ ] Fixed positions for results (with loading indicator)
+- [ ] Align buttons
+
 ---
 
 This project was created using `bun init` in bun v1.2.2. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
