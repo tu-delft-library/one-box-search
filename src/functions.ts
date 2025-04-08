@@ -10,7 +10,12 @@ export function fetchJson(url: string, body?: any) {
     options.body = JSON.stringify(body);
   }
   const req = new Request(url, options);
-  return fetch(req).then((response) => response.json());
+  return fetch(req).then((response) => {
+    if (response.ok) {
+      const { headers } = response;
+      return response.json().then((results) => ({ headers, results }));
+    } else return null;
+  });
 }
 
 // Use preact? https://preactjs.com/
