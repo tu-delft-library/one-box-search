@@ -56,7 +56,7 @@ export default [
   {
     title: "TU Delft Repository",
     apiBaseUrl:
-      "https://repository.tudelft.nl/tudelft/library/search?limit=10&search_term=",
+      "https://repository.tudelft.nl/tudelft/library/search?limit=10&searchterm=",
     searchBaseUrl: "https://repository.tudelft.nl/search?search_term=",
     getRecords: function (query: string) {
       return fetchJson(this.apiBaseUrl + query)
@@ -117,7 +117,7 @@ export default [
               href: "https://heritage.tudelft.nl/" + d.slug,
               date: d.topic_date ? d.topic_date[0] : undefined,
             }));
-          normalizedResults.count = resp.out_of;
+          normalizedResults.count = resp.results[0].found;
           return normalizedResults;
         })
         .catch((err) => console.log(err));
