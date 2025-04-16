@@ -2,7 +2,7 @@
 var displayCount = 3;
 var providers_default = [
   {
-    title: "4TU.ResearchData",
+    title: "Research Data (4TU)",
     apiBaseUrl: "https://data.4tu.nl/v2/articles/search",
     searchBaseUrl: "https://data.4tu.nl/search?search=",
     getRecords: async function(query) {
@@ -24,7 +24,7 @@ var providers_default = [
     }
   },
   {
-    title: "WorldCat",
+    title: "Catalogue",
     apiBaseUrl: "https://sammeltassen-oclcsearchapi.web.val.run?q=",
     searchBaseUrl: "https://tudelft.on.worldcat.org/search?queryString=",
     getRecords: async function(query) {
@@ -69,7 +69,7 @@ var providers_default = [
     }
   },
   {
-    title: "Academic Heritage, History and Art",
+    title: "Special Collections",
     apiBaseUrl: "https://63flhve71t2un5xgp.a1.typesense.net/multi_search?x-typesense-api-key=8EOitKCMTbxUKPZNqUEoQS9M2RGvpkZS",
     searchBaseUrl: "https://heritage.tudelft.nl/nl/search?production-manifests%5Bquery%5D=",
     getRecords: async function(query) {
