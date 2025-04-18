@@ -22,7 +22,7 @@ export default [
           .map((d) => ({
             id: d.doi,
             title: d.title,
-            authors: null,
+            authors: d.authors.map((author) => author.full_name).join(", "),
             href: "https://doi.org/" + d.doi,
             date: d.published_date,
           }));
