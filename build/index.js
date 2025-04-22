@@ -12,7 +12,7 @@ var providers_default = [
         const normalizedResults = results.slice(0, displayCount).map((d) => ({
           id: d.doi,
           title: d.title,
-          authors: null,
+          authors: d.authors.map((author) => author.full_name).join(", "),
           href: "https://doi.org/" + d.doi,
           date: d.published_date
         }));

@@ -50,6 +50,7 @@ Visit the following URL to test the script: [https://www.tudelft.nl/library/zoek
 - [ ] Fixed positions for results (with loading indicator)
 - [ ] Align buttons
 - [ ] Show notice if no results
+- [ ] Add [databases](https://databases.tudl.tudelft.nl/)
 
 ---
 
