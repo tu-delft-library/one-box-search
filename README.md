@@ -50,6 +50,14 @@ Visit the following URL to test the script: [https://www.tudelft.nl/library/zoek
 - [ ] Fixed positions for results (with loading indicator)
 - [ ] Align buttons
 - [ ] Show notice if no results
+- [ ] Add [databases](https://databases.tudl.tudelft.nl/)
+  - Based on [metadata](https://databases.tudl.tudelft.nl/wp-content/uploads/sites/20/databases_content_metadata.csv) file
+  - Prioritize titles, then abstract
+  - Show faculties as tags, link to [page](https://databases.tudl.tudelft.nl/?f=AE) with databases for specific faculty
+  - Show title, access info (if available), abstract (abbreviate)
+  - Link directly to database
+  - Button to all databases
+- [ ] Automatically publish build as release and remove build folder from repo
 
 ---
 

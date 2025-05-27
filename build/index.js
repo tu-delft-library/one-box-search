@@ -12,7 +12,7 @@ var providers_default = [
         const normalizedResults = results.slice(0, displayCount).map((d) => ({
           id: d.doi,
           title: d.title,
-          authors: null,
+          authors: d.authors.map((author) => author.full_name).join(", "),
           href: "https://doi.org/" + d.doi,
           date: d.published_date
         }));
@@ -25,7 +25,7 @@ var providers_default = [
   },
   {
     title: "Catalogue",
-    apiBaseUrl: "https://sammeltassen-oclcsearchapi.web.val.run?q=",
+    apiBaseUrl: "https://handler.tudelft.nl/worldcat?type=brief&search=",
     searchBaseUrl: "https://tudelft.on.worldcat.org/search?queryString=",
     getRecords: async function(query) {
       const response = await fetchJson(this.apiBaseUrl + query);

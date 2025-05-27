@@ -19,6 +19,14 @@ export type DjehutySearchResult = {
   url_public_api: string;
   url_private_html: string;
   url_public_html: string;
+  authors: {
+    id: null | number;
+    uuid: string;
+    full_name: string;
+    is_active: boolean;
+    url_name: null | string;
+    orcid_id: string;
+  }[];
   timeline: {
     posted: string;
     firstOnline: string;

@@ -10,7 +10,7 @@ const displayCount = 3;
 
 export default [
   {
-    title: "4TU.ResearchData",
+    title: "Research Data (4TU)",
     apiBaseUrl: "https://data.4tu.nl/v2/articles/search",
     searchBaseUrl: "https://data.4tu.nl/search?search=",
     getRecords: async function (query: string) {
@@ -22,7 +22,7 @@ export default [
           .map((d) => ({
             id: d.doi,
             title: d.title,
-            authors: null,
+            authors: d.authors.map((author) => author.full_name).join(", "),
             href: "https://doi.org/" + d.doi,
             date: d.published_date,
           }));
@@ -36,8 +36,8 @@ export default [
     },
   },
   {
-    title: "WorldCat",
-    apiBaseUrl: "https://sammeltassen-oclcsearchapi.web.val.run?q=",
+    title: "Catalogue",
+    apiBaseUrl: "https://handler.tudelft.nl/worldcat?type=brief&search=",
     searchBaseUrl: "https://tudelft.on.worldcat.org/search?queryString=",
     getRecords: async function (query: string) {
       const response = await fetchJson(this.apiBaseUrl + query);
@@ -86,7 +86,7 @@ export default [
   },
   {
     // Todo: types for response
-    title: "Academic Heritage, History and Art",
+    title: "Special Collections",
     apiBaseUrl:
       "https://63flhve71t2un5xgp.a1.typesense.net/multi_search?x-typesense-api-key=8EOitKCMTbxUKPZNqUEoQS9M2RGvpkZS",
     searchBaseUrl:
