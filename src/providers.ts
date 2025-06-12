@@ -6,7 +6,6 @@ import type {
   DjehutySearchResult,
   RepositorySearchResult,
   WorldCatSearchResult,
-  DatabaseNormalized,
 } from "./types/types";
 
 const displayCount = 3;

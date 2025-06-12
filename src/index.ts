@@ -4,5 +4,6 @@ window.onload = () => {
   const { value } = document.querySelector(
     ".searchForm-input"
   ) as HTMLInputElement;
-  createResults(value);
+  const language = document.documentElement.lang || "en";
+  createResults(value, language);
 };

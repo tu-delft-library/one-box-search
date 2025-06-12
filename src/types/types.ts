@@ -109,3 +109,8 @@ export type DatabaseNormalized = {
   disciplines: string[];
   type: string;
 };
+
+export type Translations = {
+  en: string;
+  nl: string;
+};

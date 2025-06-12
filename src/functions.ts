@@ -1,4 +1,10 @@
 import searchProviders from "./providers";
+import type { Translations } from "./types/types";
+
+let language: string | undefined = undefined;
+
+export const t = (translations: Translations) =>
+  language === "nl" ? translations.nl : translations.en;
 
 export function fetchJson(url: string, body?: any) {
   const method = body ? "POST" : "GET";
@@ -55,10 +61,12 @@ function createTypoResults(
       <div class="grid-background--white grid-background--boxed">
         ${
           records && records.length && count
-            ? count + " results"
+            ? count.toLocaleString() +
+              " " +
+              t({ en: "results", nl: "resultaten" })
             : records && records.length
-            ? "Top 3 results"
-            : "No results"
+            ? t({ en: "Top 3 results", nl: "Top 3 resultaten" })
+            : t({ en: "No results", nl: "Geen resultaten" })
         }
         <h2>${title}</h2>
         <div class="content-container">
@@ -69,7 +77,7 @@ function createTypoResults(
           } 
           <div class="t3ce frame-type-sitetud_singlebutton">
             <a href="${resultsUrl}" target=_blank class="btn btn--single align-center btn--royal_blue">
-              View all results ↗
+              ${t({ en: "View all results ↗", nl: "Bekijk alle resultaten ↗" })}
             </a>
           </div>
         </div>
@@ -78,7 +86,11 @@ function createTypoResults(
     `;
 }
 
-export async function createResults(searchInput: string) {
+export async function createResults(
+  searchInput: string,
+  languageInput: string
+) {
+  language = languageInput;
   // Get flex container
   const grid = document.querySelector(".multiRowGrid");
   if (grid) {
@@ -88,16 +100,29 @@ export async function createResults(searchInput: string) {
       const websiteResultCount = searchBox.innerHTML.split("</form>")[1].trim();
       // Remove website search count beneath search bar
       searchBox.innerHTML = searchBox.innerHTML.split("</form>")[0];
-      const websiteResults = grid.querySelector(".sm-12 > .t3ce");
+      const websiteResults = grid.querySelector(".sm-12");
       if (websiteResults) {
         const websiteHeading = websiteResults.querySelector("h2");
-        // Change heading
+        // Change heading and button text
         if (websiteHeading) {
-          websiteHeading.innerHTML = "This website";
+          websiteHeading.innerHTML = t({
+            en: "This website",
+            nl: "Deze website",
+          });
         }
+        const websiteButton = websiteResults.querySelector(".btn");
+        if (websiteButton) {
+          websiteButton.innerHTML = t({
+            en: "View all results ↗",
+            nl: "Bekijk alle resultaten ↗",
+          });
+        }
+
         // Prepend result count
         websiteResults.prepend(
-          websiteResultCount ? websiteResultCount : "No results"
+          websiteResultCount
+            ? websiteResultCount
+            : t({ en: "No results", nl: "Geen resultaten" })
         );
       }
     }
@@ -108,13 +133,13 @@ export async function createResults(searchInput: string) {
       div.className = "sm-6 md-6 lg-6";
       div.id = id;
       div.innerHTML = /*html*/ `
-      <div class="t3ce frame-type-gridelements_pi1">
-        <div class="grid-background--white grid-background--boxed">
-          <span style="color:white">-</span>
-        <h2>${title}</h2>
-          <i>Loading...</i>
-        </div>
-      </div>`;
+        <div class="t3ce frame-type-gridelements_pi1">
+          <div class="grid-background--white grid-background--boxed">
+            <span style="color:white">-</span>
+          <h2>${title}</h2>
+            <i>${t({ en: "Loading...", nl: "Aan het laden..." })}</i>
+          </div>
+        </div>`;
       if (index === 0) {
         // Place catalogue results before website results
         grid.prepend(div);
