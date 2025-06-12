@@ -1,5 +1,6 @@
 import { fetchJson } from "./functions";
 import databases from "../data/databases.json";
+import { columnFilter } from "./search";
 import type {
   NormalizedResults,
   DjehutySearchResult,
@@ -37,7 +38,8 @@ export default [
             return normalizedResults;
           } else return null;
         } else return null;
-      } catch {
+      } catch (err) {
+        console.log(err);
         return null;
       }
     },
@@ -70,7 +72,8 @@ export default [
             return normalizedResults;
           } else return null;
         } else return null;
-      } catch {
+      } catch (err) {
+        console.log(err);
         return null;
       }
     },
@@ -82,12 +85,8 @@ export default [
     searchBaseUrl: "https://databases.tudl.tudelft.nl/?t=az&q=",
     getRecords: async function (query: string) {
       try {
-        const results = databases.filter(
-          (d: DatabaseNormalized) =>
-            d.title.includes(query) ||
-            d.description.includes(query) ||
-            d.keywords.includes(query)
-        );
+        const filter = columnFilter(["title", "keywords", "description"]);
+        const results = query ? databases.filter(filter(query)) : databases;
         const normalizedResults: NormalizedResults = results
           .slice(0, displayCount)
           .map((d) => ({
@@ -98,7 +97,8 @@ export default [
           }));
         normalizedResults.count = results.length;
         return normalizedResults;
-      } catch {
+      } catch (err) {
+        console.log(err);
         return null;
       }
     },
@@ -133,7 +133,8 @@ export default [
             return normalizedResults;
           } else return null;
         } else return null;
-      } catch {
+      } catch (err) {
+        console.log(err);
         return null;
       }
     },
@@ -185,7 +186,8 @@ export default [
             return normalizedResults;
           } else return null;
         } else return null;
-      } catch {
+      } catch (err) {
+        console.log(err);
         return null;
       }
     },
