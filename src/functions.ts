@@ -33,9 +33,10 @@ function createTypoRow(props: any) {
         <div class="row">
           <div class="sm-3"></div>
           <div class="sm-9">
-            ${props.authors ? "<p>" + props.authors + "</p>" : ""} 
+            ${props.authors ? "<p>" + props.authors + "</p>" : ""}
+            ${props.description ? "<p>" + props.description + "</p>" : ""} 
             ${props.date ? "<p>Published " + props.date + "</p>" : ""}
-            <div class="fake-link">${props.id}</div>
+            ${props.id ? `<div class="fake-link">${props.id}</div>` : ""}
           </div>
         </div>
       </section>

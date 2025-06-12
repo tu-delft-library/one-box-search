@@ -76,9 +76,36 @@ export type RepositorySearchResult = {
 };
 
 export type NormalizedResults = {
-  id: string;
-  title: string;
-  authors: string | null;
-  href: string;
-  date: string;
+  id?: string;
+  title?: string;
+  authors?: string;
+  description?: string;
+  href?: string;
+  date?: string;
 }[] & { count?: undefined | number };
+
+export type DatabaseMetadata = {
+  ID: string;
+  Title_corrected: string;
+  Access_info: string;
+  Abstract: string;
+  Weblink_1: string;
+  VKC_all: string;
+  VKC_1: string;
+  VKC_2: string;
+  VKC_3: string;
+  VKC_4: string;
+  VKC_5: string;
+  VKC_6: string;
+  Information_type: string;
+};
+
+export type DatabaseNormalized = {
+  title: string;
+  access: string;
+  url: string;
+  keywords: string;
+  description: string;
+  disciplines: string[];
+  type: string;
+};
