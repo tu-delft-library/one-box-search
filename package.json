@@ -4,14 +4,13 @@
   "type": "module",
   "devDependencies": {
     "@types/bun": "latest",
-    "json-2-csv": "^5.5.9",
-    "uglify-js": "^3.19.3"
+    "json-2-csv": "^5.5.9"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "build": "bun build ./index.ts --outdir ./dist && bun uglifyjs ./dist/index.js --output ./dist/index.min.js",
-    "watch": "bun build ./index.ts --outdir ./dist --watch"
+    "build": "bun run build.ts",
+    "watch": "bun build ./src/index.ts --outdir ./dist --entry-naming search.js --watch"
   }
 }

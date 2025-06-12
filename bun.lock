@@ -6,7 +6,6 @@
       "devDependencies": {
         "@types/bun": "latest",
         "json-2-csv": "^5.5.9",
-        "uglify-js": "^3.19.3",
       },
       "peerDependencies": {
         "typescript": "^5.0.0",
@@ -29,8 +28,6 @@
     "json-2-csv": ["json-2-csv@5.5.9", "", { "dependencies": { "deeks": "3.1.0", "doc-path": "4.1.1" } }, "sha512-l4g6GZVHrsN+5SKkpOmGNSvho+saDZwXzj/xmcO0lJAgklzwsiqy70HS5tA9djcRvBEybZ9IF6R1MDFTEsaOGQ=="],
 
     "typescript": ["typescript@5.7.3", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-84MVSjMEHP+FQRPy3pX9sTVV/INIex71s9TL2Gm5FG/WG1SqXeKyZ0k7/blY/4FdOzI12CBy1vGc4og/eus0fw=="],
-
-    "uglify-js": ["uglify-js@3.19.3", "", { "bin": { "uglifyjs": "bin/uglifyjs" } }, "sha512-v3Xu+yuwBXisp6QYTcH4UbH+xYJXqnq2m/LtQVWKWzYc1iehYnLixoQDN9FH6/j9/oybfd6W9Ghwkl8+UMKTKQ=="],
 
     "undici-types": ["undici-types@6.20.0", "", {}, "sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg=="],
   }

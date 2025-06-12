@@ -13,7 +13,6 @@ Install [Bun](https://bun.sh/docs/installation) JavaScript runtime.
 To create a bundle:
 
 ```bash
-bun install
 bun run build
 ```
 
@@ -23,7 +22,7 @@ You can also automatically recreate this bundle upon changes by running:
 bun run watch
 ```
 
-This will output the file `index.js` in the `dist` folder. When running the `build` command it will write an additional minimized version `index.min.js`. To test the script install [Tampermonkey](https://www.tampermonkey.net/) for Google Chrome and create a new userscript with the following contents:
+This will output the file `search.js` in the `dist` folder. When running the `build` command it will write an additional minimized version `search.min.js`. To test the script install [Tampermonkey](https://www.tampermonkey.net/) for Google Chrome and create a new userscript with the following contents:
 
 ```js
 // ==UserScript==
@@ -31,11 +30,11 @@ This will output the file `index.js` in the `dist` folder. When running the `bui
 // @description Searching across TU Delft Library resources
 // @version     2025-02-18
 // @match       https://www.tudelft.nl/*library/zoeken-dev*
-// @require     file:///path-to-repository/dist/index.js
+// @require     file:///path-to-repository/dist/search.js
 // ==/UserScript==
 ```
 
-Replace `path-to-repository` for the full path to the cloned GitHub repository, e.g. `Users/username/Documents/GitHub/one-box-search/dist/index.js`.
+Replace `path-to-repository` for the full path to the cloned GitHub repository, e.g. `Users/username/Documents/GitHub/one-box-search/dist/search.js`.
 
 Make sure to enable `Allow access to file URLs` for Tampermonkey under Manage Extensions > Tampermonkey > Details. See also:
 
@@ -46,7 +45,7 @@ Visit the following URL to test the script: [https://www.tudelft.nl/library/zoek
 
 ## Databases
 
-In order to search the [databases](https://databases.tudl.tudelft.nl/), this repository includes a json file of this entire resource in the `./data` directory. It can be refreshed by running:
+In order to search the [databases](https://databases.tudl.tudelft.nl/), this repository includes a static json index of this resource in the `./data` directory. It can be refreshed by running:
 
 ```bash
 bun install
