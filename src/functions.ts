@@ -56,7 +56,8 @@ function createTypoRow(props: any) {
 }
 
 function createTypoResults(
-  title: string,
+  title: Translations,
+  description: Translations,
   records: null | any[],
   count: number | undefined,
   resultsUrl: string
@@ -71,7 +72,8 @@ function createTypoResults(
           : records && records.length
           ? t({ en: "Top 3 results", nl: "Top 3 resultaten" })
           : t({ en: "No results", nl: "Geen resultaten" })}
-        <h2>${title}</h2>
+        <h2>${t(title)}</h2>
+        <p><i>${t(description)}</i></p>
         <div class="content-container">
           ${records && records.length
             ? records.map(createTypoRow).join("\n")
@@ -110,14 +112,21 @@ export async function createResults(
         const websiteHeading = websiteResults.querySelector("h2");
         // Change heading and button text
         if (websiteHeading) {
-          websiteHeading.innerHTML = t({
+          websiteHeading.textContent = t({
             en: "This website",
             nl: "Deze website",
           });
+          const subtitle = document.createElement("p");
+          subtitle.style.fontStyle = "italic";
+          subtitle.innerText = t({
+            en: "Guidelines, tools, events, news",
+            nl: "Richtlijnen, hulpmiddelen, evenementen en nieuwsberichten",
+          });
+          websiteHeading.after(subtitle);
         }
         const websiteButton = websiteResults.querySelector(".btn");
         if (websiteButton) {
-          websiteButton.innerHTML = t({
+          websiteButton.textContent = t({
             en: "View all results ↗",
             nl: "Bekijk alle resultaten ↗",
           });
@@ -141,7 +150,7 @@ export async function createResults(
         <div class="t3ce frame-type-gridelements_pi1">
           <div class="grid-background--white grid-background--boxed">
             <span style="color:white">-</span>
-            <h2>${title}</h2>
+            <h2>${t(title)}</h2>
             <i>${t({ en: "Loading...", nl: "Aan het laden..." })}</i>
           </div>
         </div>
@@ -150,7 +159,7 @@ export async function createResults(
         // Place catalogue results before website results
         grid.prepend(div);
       } else {
-        grid.appendChild(div);
+        grid.append(div);
       }
     });
 
@@ -159,6 +168,7 @@ export async function createResults(
       const records = await provider.getRecords(searchInput);
       const typoResults = createTypoResults(
         provider.title,
+        provider.description,
         records,
         records?.count,
         provider.searchBaseUrl + searchInput

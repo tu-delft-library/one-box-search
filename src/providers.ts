@@ -14,7 +14,14 @@ const displayCount = 3;
 export default [
   {
     id: "catalogue",
-    title: "Catalogue",
+    title: {
+      en: "Catalogue",
+      nl: "Catalogus",
+    },
+    description: {
+      en: "Physical and digital books, media, journals",
+      nl: "Fysieke en digitale boeken, media, tijdschriften",
+    },
     apiBaseUrl: "https://handler.tudelft.nl/worldcat?type=brief&search=",
     searchBaseUrl: "https://tudelft.on.worldcat.org/search?queryString=",
     getRecords: async function (query: string) {
@@ -45,7 +52,14 @@ export default [
   },
   {
     id: "repository",
-    title: "TU Delft Repository",
+    title: {
+      en: "TU Delft Repository",
+      nl: "TU Delft Repository",
+    },
+    description: {
+      en: "Digital archive of TU Delft output",
+      nl: "Digitaal archief van TU Delft output",
+    },
     apiBaseUrl:
       "https://repository.tudelft.nl/tudelft/library/search?limit=10&searchterm=",
     searchBaseUrl: "https://repository.tudelft.nl/search?search_term=",
@@ -79,7 +93,14 @@ export default [
   },
   {
     id: "databases",
-    title: "Databases",
+    title: {
+      en: "Databases",
+      nl: "Databases",
+    },
+    description: {
+      en: "Recommended resources for the TU Delft community",
+      nl: "Aanbevolen bronnen voor de TU Delft gemeenschap",
+    },
     apiBaseUrl: "",
     searchBaseUrl: "https://databases.tudl.tudelft.nl/?t=az&q=",
     getRecords: async function (query: string) {
@@ -104,7 +125,14 @@ export default [
   },
   {
     id: "research-data",
-    title: "Research Data (4TU)",
+    title: {
+      en: "Research Data (4TU)",
+      nl: "Research Data (4TU)",
+    },
+    description: {
+      en: "Research datasets, publications, and software",
+      nl: "Onderzoeksdatasets, publicaties en software",
+    },
     apiBaseUrl: "https://data.4tu.nl/v2/articles/search",
     searchBaseUrl: "https://data.4tu.nl/search?search=",
     getRecords: async function (query: string) {
@@ -141,7 +169,14 @@ export default [
   {
     // Todo: types for response
     id: "special-collections",
-    title: "Special Collections",
+    title: {
+      en: "Special Collections",
+      nl: "Bijzondere Collecties",
+    },
+    description: {
+      en: "Academic heritage, Trésor, Map room",
+      nl: "Academisch erfgoed, Trésor, kaartenkamer",
+    },
     apiBaseUrl:
       "https://63flhve71t2un5xgp.a1.typesense.net/multi_search?x-typesense-api-key=8EOitKCMTbxUKPZNqUEoQS9M2RGvpkZS",
     searchBaseUrl:
