@@ -2163,6 +2163,7 @@ var providers_default = [
 ];
 
 // src/functions.ts
+var html = (strings, ...values) => String.raw({ raw: strings }, ...values);
 var language = undefined;
 var t = (translations) => language === "nl" ? translations.nl : translations.en;
 function fetchJson(url, body) {
@@ -2184,7 +2185,7 @@ function fetchJson(url, body) {
   });
 }
 function createTypoRow(props) {
-  return `
+  return html`
     <a
       href="${props.href}"
       title="${props.title}"
@@ -2197,33 +2198,37 @@ function createTypoRow(props) {
           <div class="sm-3"></div>
           <div class="sm-9">
             ${props.authors ? "<p>" + props.authors + "</p>" : ""}
-            ${props.description ? "<p>" + props.description + "</p>" : ""} 
+            ${props.description ? "<p>" + props.description + "</p>" : ""}
             ${props.date ? "<p>Published " + props.date + "</p>" : ""}
             ${props.id ? `<div class="fake-link">${props.id}</div>` : ""}
           </div>
         </div>
       </section>
     </a>
-    `;
+  `;
 }
 function createTypoResults(title, records, count, resultsUrl) {
-  return `
+  return html`
     <div class="t3ce frame-type-gridelements_pi1">
       <div class="grid-background--white grid-background--boxed">
         ${records && records.length && count ? count.toLocaleString() + " " + t({ en: "results", nl: "resultaten" }) : records && records.length ? t({ en: "Top 3 results", nl: "Top 3 resultaten" }) : t({ en: "No results", nl: "Geen resultaten" })}
         <h2>${title}</h2>
         <div class="content-container">
           ${records && records.length ? records.map(createTypoRow).join(`
-`) : ""} 
+`) : ""}
           <div class="t3ce frame-type-sitetud_singlebutton">
-            <a href="${resultsUrl}" target=_blank class="btn btn--single align-center btn--royal_blue">
+            <a
+              href="${resultsUrl}"
+              target="_blank"
+              class="btn btn--single align-center btn--royal_blue"
+            >
               ${t({ en: "View all results ↗", nl: "Bekijk alle resultaten ↗" })}
             </a>
           </div>
         </div>
       </div>
     </div>
-    `;
+  `;
 }
 async function createResults(searchInput, languageInput) {
   language = languageInput;
@@ -2256,14 +2261,15 @@ async function createResults(searchInput, languageInput) {
       const div = document.createElement("div");
       div.className = "sm-6 md-6 lg-6";
       div.id = id;
-      div.innerHTML = `
+      div.innerHTML = html`
         <div class="t3ce frame-type-gridelements_pi1">
           <div class="grid-background--white grid-background--boxed">
             <span style="color:white">-</span>
-          <h2>${title}</h2>
+            <h2>${title}</h2>
             <i>${t({ en: "Loading...", nl: "Aan het laden..." })}</i>
           </div>
-        </div>`;
+        </div>
+      `;
       if (index === 0) {
         grid.prepend(div);
       } else {

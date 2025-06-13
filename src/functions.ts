@@ -1,6 +1,10 @@
 import searchProviders from "./providers";
 import type { Translations } from "./types/types";
 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/raw#building_an_identity_tag
+export const html = (strings: TemplateStringsArray, ...values: any[]) =>
+  String.raw({ raw: strings }, ...values);
+
 let language: string | undefined = undefined;
 
 export const t = (translations: Translations) =>
@@ -26,8 +30,9 @@ export function fetchJson(url: string, body?: any) {
 
 // Use preact? https://preactjs.com/
 // Or: https://htmx.org/
+// Or: https://lit.dev/
 function createTypoRow(props: any) {
-  return /*html*/ `
+  return html`
     <a
       href="${props.href}"
       title="${props.title}"
@@ -40,14 +45,14 @@ function createTypoRow(props: any) {
           <div class="sm-3"></div>
           <div class="sm-9">
             ${props.authors ? "<p>" + props.authors + "</p>" : ""}
-            ${props.description ? "<p>" + props.description + "</p>" : ""} 
+            ${props.description ? "<p>" + props.description + "</p>" : ""}
             ${props.date ? "<p>Published " + props.date + "</p>" : ""}
             ${props.id ? `<div class="fake-link">${props.id}</div>` : ""}
           </div>
         </div>
       </section>
     </a>
-    `;
+  `;
 }
 
 function createTypoResults(
@@ -56,34 +61,34 @@ function createTypoResults(
   count: number | undefined,
   resultsUrl: string
 ) {
-  return /*html*/ `
+  return html`
     <div class="t3ce frame-type-gridelements_pi1">
       <div class="grid-background--white grid-background--boxed">
-        ${
-          records && records.length && count
-            ? count.toLocaleString() +
-              " " +
-              t({ en: "results", nl: "resultaten" })
-            : records && records.length
-            ? t({ en: "Top 3 results", nl: "Top 3 resultaten" })
-            : t({ en: "No results", nl: "Geen resultaten" })
-        }
+        ${records && records.length && count
+          ? count.toLocaleString() +
+            " " +
+            t({ en: "results", nl: "resultaten" })
+          : records && records.length
+          ? t({ en: "Top 3 results", nl: "Top 3 resultaten" })
+          : t({ en: "No results", nl: "Geen resultaten" })}
         <h2>${title}</h2>
         <div class="content-container">
-          ${
-            records && records.length
-              ? records.map(createTypoRow).join("\n")
-              : ""
-          } 
+          ${records && records.length
+            ? records.map(createTypoRow).join("\n")
+            : ""}
           <div class="t3ce frame-type-sitetud_singlebutton">
-            <a href="${resultsUrl}" target=_blank class="btn btn--single align-center btn--royal_blue">
+            <a
+              href="${resultsUrl}"
+              target="_blank"
+              class="btn btn--single align-center btn--royal_blue"
+            >
               ${t({ en: "View all results ↗", nl: "Bekijk alle resultaten ↗" })}
             </a>
           </div>
         </div>
       </div>
     </div>
-    `;
+  `;
 }
 
 export async function createResults(
@@ -132,14 +137,15 @@ export async function createResults(
       const div = document.createElement("div");
       div.className = "sm-6 md-6 lg-6";
       div.id = id;
-      div.innerHTML = /*html*/ `
+      div.innerHTML = html`
         <div class="t3ce frame-type-gridelements_pi1">
           <div class="grid-background--white grid-background--boxed">
             <span style="color:white">-</span>
-          <h2>${title}</h2>
+            <h2>${title}</h2>
             <i>${t({ en: "Loading...", nl: "Aan het laden..." })}</i>
           </div>
-        </div>`;
+        </div>
+      `;
       if (index === 0) {
         // Place catalogue results before website results
         grid.prepend(div);
