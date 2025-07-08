@@ -2293,8 +2293,8 @@ async function createResults(searchInput, languageInput) {
         const websiteButton = websiteResults.querySelector(".btn");
         if (websiteButton) {
           websiteButton.textContent = t({
-            en: "View all results ↗",
-            nl: "Bekijk alle resultaten ↗"
+            en: "View all results",
+            nl: "Bekijk alle resultaten"
           });
         }
         websiteResults.prepend(websiteResultCount ? websiteResultCount : t({ en: "No results", nl: "Geen resultaten" }));

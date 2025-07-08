@@ -127,8 +127,8 @@ export async function createResults(
         const websiteButton = websiteResults.querySelector(".btn");
         if (websiteButton) {
           websiteButton.textContent = t({
-            en: "View all results ↗",
-            nl: "Bekijk alle resultaten ↗",
+            en: "View all results",
+            nl: "Bekijk alle resultaten",
           });
         }
 
