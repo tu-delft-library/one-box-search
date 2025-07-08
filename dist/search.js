@@ -303,7 +303,7 @@ var databases_default = [
   {
     title: "BouwZo (formerly ISSO Open)",
     access: "Login via SurfConext (SSO) to access and create a personal profile",
-    url: "https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fbouwzo.nl%2Fsearch%3FPublisher%3DISSO&data=05%7C02%7CM.E.vandenBerg%40tudelft.nl%7Ca1149dca35734026a1e408dd07a7a975%7C096e524d692940308cd38ab42de0887b%7C0%7C0%7C638675138857247242%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=Hid1EoPJT29Peyx0Njg%2BYWiwhOpS4st9i8S%2Bxghicbs%3D&reserved=0",
+    url: "https://bouwzo.nl/login",
     keywords: "Building physics and services; Construction materials and building structures; Safety engineering",
     description: "BouwZo is the Dutch knowledge platform for construction and installation professionals, developed by ISSO, the Dutch Knowledge Centre for the building services industry. It provides access to a wide array of resources, including guidelines, standards, regulations, checklists, research reports, and practical tools. The platform incorporates contributions from organisations such as InstallQ and Rijksvastgoedbedrijf, ensuring authoritative and comprehensive coverage. Users can log in via SurfConext (SSO) to access the platform and create a personalised profile. BouwZo is available exclusively in Dutch.",
     disciplines: [
@@ -550,7 +550,7 @@ var databases_default = [
     disciplines: [
       "All"
     ],
-    type: "patent information"
+    type: "articles"
   },
   {
     title: "Dimensions",
@@ -561,7 +561,7 @@ var databases_default = [
     disciplines: [
       "All"
     ],
-    type: "articles"
+    type: "patent information"
   },
   {
     title: "DINOloket",
@@ -1280,6 +1280,17 @@ Check 'My subscriptions' and click on one of the TU Delft subscriptions 'Air & S
     type: "articles"
   },
   {
+    title: "OpenAlex",
+    access: "",
+    url: "https://openalex.org/",
+    keywords: "Scientific research; Information systems, databases",
+    description: "OpenAlex is a fully open bibliographic database providing access to the global research system, serving as an open alternative to proprietary services. It covers all scholarly disciplines, including non-English works, research from the Global South, and grey literature. Its web interface allows users to query metadata for works—for example, by title, abstract, authors, institutions, and sources—supporting Boolean searches and faceted filtering on attributes such as language, corresponding authors, funders, Sustainable Development Goals, and more. The interface displays useful statistics, citation counts, and links to available full texts, while the underlying data includes metrics such as Field-Weighted Citation Impact (FWCI). The complete dataset, offered under a CC0 license, is accessible via a powerful API and data snapshots. The API provides granular details, including comprehensive open access information such as specific license, version, and repository location.",
+    disciplines: [
+      "All"
+    ],
+    type: "articles"
+  },
+  {
     title: "OpenDissertations",
     access: "",
     url: "https://urldefense.com/v3/__https:/search.ebscohost.com/login.aspx?authtype=sso&custid=s1131660&groupid=main&profile=ehost&defaultdb=ddu__;!!PAKc-5URQlI!9Zu7lF7UbtETWEnzX_S15j8G8w8D_Wx9Kn0u1A_vL_G0NPTbFNkSYyKJ7hB5AwnLVWvDnhQx5x4LxyuvgxofjA$",
@@ -1553,23 +1564,23 @@ Check 'My subscriptions' and click on one of the TU Delft subscriptions 'Air & S
     title: "SciFinder-n",
     access: "A one-time registration with NetID is required. Go to: https://www.lib.tudelft.nl/scifinderregistration/",
     url: "https://scifinder-n.cas.org/",
-    keywords: "Biomedical engineering; chemisty; Materials engineering; Scientific research",
-    description: "SciFinder-n is a research discovery tool that allows you to explore the CAS databases containing literature from many scientific disciplines including biomedical sciences, chemistry, engineering, materials science, agricultural science, and more. SciFinder-n retrieves information contained in databases produced by Chemical Abstracts Service (CAS) as well as in the MEDLINE database of the National Library of Medicine (NLM). SciFinder-n features the CAS Content Collection: Substances, CAS References, CAS Reactions, CAS Chemical Supplier Insights, Chemical Regulation and CAS Markush Representations in Patents. The Substances module contain chemical names, structures, CAS Registry Numbers and covers organic and inorganic substances, including alloys, coordination compounds, minerals, mixtures, polymers, and salts, protein and nucleic acid sequences and enriched with experimental and predicted property data and spectra. CAS References are sourced from thousands of journals, patent authorities as well as technical reports, books, conference proceedings and dissertations. They are also enhanced with English language summaries for non-English publications, standardized CAS Lexicon terminology indexing, cited and citing references, legal status, and direct links to the full-text publications (where available). CAS Reactions provides a current and reliable source of synthetic details sourced from journals, patents, dissertations, and seminal reference works. This module covers reactions including organometallics, total syntheses of natural products, and biotransformation reactions which are ehanced with yield data, detailed reaction conditions, and experimental procedures. CAS Chemical Supplier Insights provides an up-to-date resource for finding commercially available chemicals, including available quantities, prices, and supplier contact information. Chemical Regulations covers a vast number of unique chemical substances, as well as information from numerous regulatory inventories and lists. Finally, CAS Markush Representations in Patents are prepared by CAS to make them searchable to ensure that your queries don’t miss critical documents. A one-time registration with NetID is required. Go to: https://www.lib.tudelft.nl/scifinderregistration/",
-    disciplines: [
-      "All"
-    ],
-    type: "articles"
-  },
-  {
-    title: "SciFinder-n",
-    access: "A one-time registration with NetID is required. Go to: https://www.lib.tudelft.nl/scifinderregistration/",
-    url: "https://scifinder-n.cas.org/",
     keywords: "Biomedical engineering; Chemistry; Materials engineering; Scientific research",
     description: "SciFinder-n is a research discovery tool that allows you to explore the CAS databases containing literature from many scientific disciplines including biomedical sciences, chemistry, engineering, materials science, agricultural science, and more. SciFinder-n retrieves information contained in databases produced by Chemical Abstracts Service (CAS) as well as in the MEDLINE database of the National Library of Medicine (NLM). SciFinder-n features the CAS Content Collection: Substances, CAS References, CAS Reactions, CAS Chemical Supplier Insights, Chemical Regulation and CAS Markush Representations in Patents. The Substances module contain chemical names, structures, CAS Registry Numbers and covers organic and inorganic substances, including alloys, coordination compounds, minerals, mixtures, polymers, and salts, protein and nucleic acid sequences and enriched with experimental and predicted property data and spectra. CAS References are sourced from thousands of journals, patent authorities as well as technical reports, books, conference proceedings and dissertations. They are also enhanced with English language summaries for non-English publications, standardized CAS Lexicon terminology indexing, cited and citing references, legal status, and direct links to the full-text publications (where available). CAS Reactions provides a current and reliable source of synthetic details sourced from journals, patents, dissertations, and seminal reference works. This module covers reactions including organometallics, total syntheses of natural products, and biotransformation reactions which are ehanced with yield data, detailed reaction conditions, and experimental procedures. CAS Chemical Supplier Insights provides an up-to-date resource for finding commercially available chemicals, including available quantities, prices, and supplier contact information. Chemical Regulations covers a vast number of unique chemical substances, as well as information from numerous regulatory inventories and lists. Finally, CAS Markush Representations in Patents are prepared by CAS to make them searchable to ensure that your queries don’t miss critical documents. A one-time registration with NetID is required. Go to: https://www.lib.tudelft.nl/scifinderregistration/",
     disciplines: [
       "All"
     ],
     type: "patent information"
+  },
+  {
+    title: "SciFinder-n",
+    access: "A one-time registration with NetID is required. Go to: https://www.lib.tudelft.nl/scifinderregistration/",
+    url: "https://scifinder-n.cas.org/",
+    keywords: "Biomedical engineering; chemisty; Materials engineering; Scientific research",
+    description: "SciFinder-n is a research discovery tool that allows you to explore the CAS databases containing literature from many scientific disciplines including biomedical sciences, chemistry, engineering, materials science, agricultural science, and more. SciFinder-n retrieves information contained in databases produced by Chemical Abstracts Service (CAS) as well as in the MEDLINE database of the National Library of Medicine (NLM). SciFinder-n features the CAS Content Collection: Substances, CAS References, CAS Reactions, CAS Chemical Supplier Insights, Chemical Regulation and CAS Markush Representations in Patents. The Substances module contain chemical names, structures, CAS Registry Numbers and covers organic and inorganic substances, including alloys, coordination compounds, minerals, mixtures, polymers, and salts, protein and nucleic acid sequences and enriched with experimental and predicted property data and spectra. CAS References are sourced from thousands of journals, patent authorities as well as technical reports, books, conference proceedings and dissertations. They are also enhanced with English language summaries for non-English publications, standardized CAS Lexicon terminology indexing, cited and citing references, legal status, and direct links to the full-text publications (where available). CAS Reactions provides a current and reliable source of synthetic details sourced from journals, patents, dissertations, and seminal reference works. This module covers reactions including organometallics, total syntheses of natural products, and biotransformation reactions which are ehanced with yield data, detailed reaction conditions, and experimental procedures. CAS Chemical Supplier Insights provides an up-to-date resource for finding commercially available chemicals, including available quantities, prices, and supplier contact information. Chemical Regulations covers a vast number of unique chemical substances, as well as information from numerous regulatory inventories and lists. Finally, CAS Markush Representations in Patents are prepared by CAS to make them searchable to ensure that your queries don’t miss critical documents. A one-time registration with NetID is required. Go to: https://www.lib.tudelft.nl/scifinderregistration/",
+    disciplines: [
+      "All"
+    ],
+    type: "articles"
   },
   {
     title: "SciFinder-n (one-time registration)",
@@ -2224,7 +2235,7 @@ function createTypoRow(props) {
     <a
       href="${props.href}"
       title="${props.title}"
-      target="_top"
+      target="_blank"
       class="news-summary"
     >
       <section>
@@ -2266,6 +2277,21 @@ function createTypoResults(title, description, records, count, resultsUrl) {
     </div>
   `;
 }
+var createSearchSubtitle = () => {
+  return html`<div
+    class="t3ce frame-type-text"
+    style="margin-bottom:-20px;margin-top:15px;"
+  >
+    ${t({
+    en: "Search gives results from",
+    nl: "Zoeken geeft resultaten uit"
+  })}
+    <a href="#website"
+      ><b>${t({ en: "this website", nl: "deze website" })}</b></a
+    >,
+    ${providers_default.map((provider) => html`<a href="#${provider.id}"><b>${t(provider.title)}</b></a>`).join(", ")}.
+  </div>`;
+};
 async function createResults(searchInput, languageInput) {
   language = languageInput;
   const grid = document.querySelector(".multiRowGrid");
@@ -2273,22 +2299,24 @@ async function createResults(searchInput, languageInput) {
     const searchBox = document.querySelector("div.hiddenSidebarContent");
     if (searchBox) {
       const websiteResultCount = searchBox.innerHTML.split("</form>")[1].trim();
-      searchBox.innerHTML = searchBox.innerHTML.split("</form>")[0];
+      const subtitle = createSearchSubtitle();
+      searchBox.innerHTML = searchBox.innerHTML.split("</form>")[0] + subtitle;
       const websiteResults = grid.querySelector(".sm-12");
       if (websiteResults) {
+        websiteResults.id = "website";
         const websiteHeading = websiteResults.querySelector("h2");
         if (websiteHeading) {
           websiteHeading.textContent = t({
             en: "This website",
             nl: "Deze website"
           });
-          const subtitle = document.createElement("p");
-          subtitle.style.fontStyle = "italic";
-          subtitle.innerText = t({
+          const subtitle2 = document.createElement("p");
+          subtitle2.style.fontStyle = "italic";
+          subtitle2.innerText = t({
             en: "Guidelines, tools, events, news",
             nl: "Richtlijnen, hulpmiddelen, evenementen en nieuwsberichten"
           });
-          websiteHeading.after(subtitle);
+          websiteHeading.after(subtitle2);
         }
         const websiteButton = websiteResults.querySelector(".btn");
         if (websiteButton) {
@@ -2300,32 +2328,27 @@ async function createResults(searchInput, languageInput) {
         websiteResults.prepend(websiteResultCount ? websiteResultCount : t({ en: "No results", nl: "Geen resultaten" }));
       }
     }
-    providers_default.forEach(({ id, title }, index) => {
-      const div = document.createElement("div");
-      div.className = "sm-6 md-6 lg-6";
-      div.id = id;
-      div.innerHTML = html`
+    providers_default.forEach(async (provider, index) => {
+      const container = document.createElement("div");
+      container.className = "sm-6 md-6 lg-6";
+      container.id = provider.id;
+      container.innerHTML = html`
         <div class="t3ce frame-type-gridelements_pi1">
           <div class="grid-background--white grid-background--boxed">
             <span style="color:white">-</span>
-            <h2>${t(title)}</h2>
+            <h2>${t(provider.title)}</h2>
             <i>${t({ en: "Loading...", nl: "Aan het laden..." })}</i>
           </div>
         </div>
       `;
       if (index === 0) {
-        grid.prepend(div);
+        grid.prepend(container);
       } else {
-        grid.append(div);
+        grid.append(container);
       }
-    });
-    providers_default.map(async (provider) => {
       const records = await provider.getRecords(searchInput);
       const typoResults = createTypoResults(provider.title, provider.description, records, records?.count, provider.searchBaseUrl + searchInput);
-      const container = document.getElementById(provider.id);
-      if (container) {
-        container.innerHTML = typoResults;
-      }
+      container.innerHTML = typoResults;
     });
   }
 }
@@ -2334,5 +2357,6 @@ async function createResults(searchInput, languageInput) {
 window.onload = () => {
   const { value } = document.querySelector(".searchForm-input");
   const language2 = document.documentElement.lang || "en";
+  document.documentElement.style.setProperty("scroll-behavior", "smooth");
   createResults(value, language2);
 };

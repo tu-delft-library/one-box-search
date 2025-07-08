@@ -93,6 +93,24 @@ function createTypoResults(
   `;
 }
 
+const createSearchSubtitle = () => {
+  return html`<div
+    class="t3ce frame-type-text"
+    style="margin-bottom:-20px;margin-top:15px;"
+  >
+    ${t({
+      en: "Search gives results from",
+      nl: "Zoeken geeft resultaten uit",
+    })}
+    <a href="#website"
+      ><b>${t({ en: "this website", nl: "deze website" })}</b></a
+    >,
+    ${searchProviders
+      .map(({ id, title }) => html`<a href="#${id}"><b>${t(title)}</b></a>`)
+      .join(", ")}.
+  </div>`;
+};
+
 export async function createResults(
   searchInput: string,
   languageInput: string
@@ -106,9 +124,11 @@ export async function createResults(
     if (searchBox) {
       const websiteResultCount = searchBox.innerHTML.split("</form>")[1].trim();
       // Remove website search count beneath search bar
-      searchBox.innerHTML = searchBox.innerHTML.split("</form>")[0];
+      const subtitle = createSearchSubtitle();
+      searchBox.innerHTML = searchBox.innerHTML.split("</form>")[0] + subtitle;
       const websiteResults = grid.querySelector(".sm-12");
       if (websiteResults) {
+        websiteResults.id = "website";
         const websiteHeading = websiteResults.querySelector("h2");
         // Change heading and button text
         if (websiteHeading) {
@@ -142,29 +162,25 @@ export async function createResults(
     }
 
     // Create empty containers for search results
-    searchProviders.forEach(({ id, title }, index) => {
-      const div = document.createElement("div");
-      div.className = "sm-6 md-6 lg-6";
-      div.id = id;
-      div.innerHTML = html`
+    searchProviders.forEach(async (provider, index) => {
+      const container = document.createElement("div");
+      container.className = "sm-6 md-6 lg-6";
+      container.id = provider.id;
+      container.innerHTML = html`
         <div class="t3ce frame-type-gridelements_pi1">
           <div class="grid-background--white grid-background--boxed">
             <span style="color:white">-</span>
-            <h2>${t(title)}</h2>
+            <h2>${t(provider.title)}</h2>
             <i>${t({ en: "Loading...", nl: "Aan het laden..." })}</i>
           </div>
         </div>
       `;
       if (index === 0) {
         // Place catalogue results before website results
-        grid.prepend(div);
+        grid.prepend(container);
       } else {
-        grid.append(div);
+        grid.append(container);
       }
-    });
-
-    // Add results to container
-    searchProviders.map(async (provider) => {
       const records = await provider.getRecords(searchInput);
       const typoResults = createTypoResults(
         provider.title,
@@ -173,13 +189,7 @@ export async function createResults(
         records?.count,
         provider.searchBaseUrl + searchInput
       );
-      const container = document.getElementById(provider.id);
-      if (container) {
-        // Potential security risk?
-        // https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML#security_considerations
-        // https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page
-        container.innerHTML = typoResults;
-      }
+      container.innerHTML = typoResults;
     });
   }
 }
