@@ -36,7 +36,7 @@ function createTypoRow(props: any) {
     <a
       href="${props.href}"
       title="${props.title}"
-      target="_top"
+      target="_blank"
       class="news-summary"
     >
       <section>
