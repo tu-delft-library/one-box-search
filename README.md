@@ -54,11 +54,10 @@ bun run fetch-databases.ts
 
 ## Todo
 
-- [ ] Bilingual results
+- [x] Overview of results beneath bar
 - [x] Integrate Library result count in flex box
 - [x] Fixed positions for results (with loading indicator)
 - [ ] Align buttons
-- [x] Show notice if no results
 - [x] Add [databases](https://databases.tudl.tudelft.nl/)
   - Based on [metadata](https://databases.tudl.tudelft.nl/wp-content/uploads/sites/20/databases_content_metadata.csv) file
   - Prioritize titles, then abstract
@@ -66,6 +65,8 @@ bun run fetch-databases.ts
   - Show title, access info (if available), abstract (abbreviate), format
   - Link directly to database
   - Button to all databases
+  - Separate index from script
+  - View A-Z list
 - [ ] Automatically publish build as release and remove build folder from repo
 
 ---

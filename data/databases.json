@@ -233,7 +233,7 @@
     {
         "title": "Besluit bouwwerken leefomgeving (Bbl)",
         "access": "",
-        "url": "https://www.rijksoverheid.nl/onderwerpen/bouwregelgeving/bouwbesluit-2012",
+        "url": "https://www.rijksoverheid.nl/onderwerpen/bouwregelgeving/besluit-bouwwerken-leefomgeving",
         "keywords": "Building policy; Building: design and construction; Safety engineering; Legislation",
         "description": "A structure must not pose a danger to users and the environment. Therefore, the Dutch government has established rules for safety, health, usability, energy efficiency, and environmental protection in the 'Besluit bouwwerken leefomgeving' (Building Works Decree for the Living Environment), formerly known as the 'Bouwbesluit' (Building Decree). A structure must always comply with these rules.",
         "disciplines": [
@@ -302,7 +302,7 @@
     {
         "title": "BouwZo (formerly ISSO Open)",
         "access": "Login via SurfConext (SSO) to access and create a personal profile",
-        "url": "https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fbouwzo.nl%2Fsearch%3FPublisher%3DISSO&data=05%7C02%7CM.E.vandenBerg%40tudelft.nl%7Ca1149dca35734026a1e408dd07a7a975%7C096e524d692940308cd38ab42de0887b%7C0%7C0%7C638675138857247242%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=Hid1EoPJT29Peyx0Njg%2BYWiwhOpS4st9i8S%2Bxghicbs%3D&reserved=0",
+        "url": "https://bouwzo.nl/search?Publisher=ISSO",
         "keywords": "Building physics and services; Construction materials and building structures; Safety engineering",
         "description": "BouwZo is the Dutch knowledge platform for construction and installation professionals, developed by ISSO, the Dutch Knowledge Centre for the building services industry. It provides access to a wide array of resources, including guidelines, standards, regulations, checklists, research reports, and practical tools. The platform incorporates contributions from organisations such as InstallQ and Rijksvastgoedbedrijf, ensuring authoritative and comprehensive coverage. Users can log in via SurfConext (SSO) to access the platform and create a personalised profile. BouwZo is available exclusively in Dutch.",
         "disciplines": [
@@ -549,7 +549,7 @@
         "disciplines": [
             "All"
         ],
-        "type": "patent information"
+        "type": "articles"
     },
     {
         "title": "Dimensions",
@@ -560,7 +560,7 @@
         "disciplines": [
             "All"
         ],
-        "type": "articles"
+        "type": "patent information"
     },
     {
         "title": "DINOloket",
@@ -637,7 +637,7 @@
     {
         "title": "ERIC Education Resources Information Center",
         "access": "",
-        "url": "https://urldefense.com/v3/__https:/search.ebscohost.com/login.aspx?authtype=sso&custid=s1131660&groupid=main&profile=ehost&defaultdb=eric__;!!PAKc-5URQlI!9Zu7lF7UbtETWEnzX_S15j8G8w8D_Wx9Kn0u1A_vL_G0NPTbFNkSYyKJ7hB5AwnLVWvDnhQx5x4LxytdVFaDCg$",
+        "url": "https://search.ebscohost.com/login.aspx?authtype=sso&custid=s1131660&groupid=main&profile=ehost&defaultdb=eric",
         "keywords": "Education",
         "description": "ERIC (Education Resources Information Center) is a comprehensive bibliographic and full-text database of education research and information. ERIC is an authoritative database of indexed and full-text education literature and resources. Sponsored by the Institute of Education Sciences of the U.S. Department of Education, it is an essential tool for education researchers of all kinds. ERIC includes records for a variety of source types, including journal articles, books, conference papers, curriculum guides, dissertations and policy papers. Further, researchers can limit search results by education level such as Early Childhood Education as well as on the intended audience such as Counselors or Teachers.",
         "disciplines": [
@@ -762,7 +762,7 @@
     {
         "title": "GreenFILE",
         "access": "",
-        "url": "https://urldefense.com/v3/__https:/search.ebscohost.com/login.aspx?authtype=sso&custid=s1131660&groupid=main&profile=ehost&defaultdb=8gh__;!!PAKc-5URQlI!9Zu7lF7UbtETWEnzX_S15j8G8w8D_Wx9Kn0u1A_vL_G0NPTbFNkSYyKJ7hB5AwnLVWvDnhQx5x4LxyuQlnP3Tg$",
+        "url": "https://search.ebscohost.com/login.aspx?authtype=sso&custid=s1131660&groupid=main&profile=ehost&defaultdb=8gh",
         "keywords": "Environmental sciences; Environmental technology; Ecology; Environmental policy",
         "description": "GreenFILE is a research database covering all aspects of human impact to the environment. Its collection of scholarly, government and general-interest titles includes content on global warming, green building, pollution, sustainable agriculture, renewable energy, recycling, and more.",
         "disciplines": [
@@ -811,7 +811,7 @@
     {
         "title": "Hydraulic Engineering Reports",
         "access": "",
-        "url": "https://repository.tudelft.nl/search?collection=hydraulic_reports",
+        "url": "https://repository.tudelft.nl/search?page=1&sort=relevance&former_collection=hydraulic_reports",
         "keywords": "Hydraulic engineering; Civil engineering",
         "description": "Repository Hydraulic Engineering Reports is the digital source of public scientific reports (full text) of the Department of Hydraulic Engineering, part of Faculty Civil Engineering & Geosciences of TU Delft, and hydraulic engineering reports of other institutions and organisations. Researchers themselves, or their assistants, place their material in Repository Hydraulic Engineering Reports.",
         "disciplines": [
@@ -939,7 +939,7 @@
     {
         "title": "Journal Browser",
         "access": "",
-        "url": "https://www.tudelft.nl/en/library/support/library-for-researchers/publishing-outreach/journal-browser",
+        "url": "https://www.tudelft.nl/en/library/publish/open-access/find-a-journal-to-publish-open",
         "keywords": "Scientific research; Writing and reporting",
         "description": "At both the national and institutional levels, agreements are established with publishers that enable corresponding authors to publish open access on their platforms either without costs or at a significantly reduced rate. These agreements involve publishers such as Springer, Wiley, Taylor & Francis, Elsevier, Cambridge University Press, and the American Chemical Society. The Journal Browser provides information on journals gathered from multiple sources, including the Directory of Open Access Journals (DOAJ) and the Dutch academic publisher agreements. This tool can be used to identify which journal discounts are available for corresponding authors from TU Delft, as well as to find trustworthy journals and those that do not charge any Article Processing Charges (APCs). For each journal, the platform displays information on APC discounts, open access agreements that allow publishing at no extra or reduced cost, and journal metrics such as SJR, SNIP, and CiteScore, along with the journal's rank within its category and recent article titles. Users can search for journals by title or keyword and have the option to sort results by title or based on journal metrics.",
         "disciplines": [
@@ -1028,7 +1028,7 @@
     {
         "title": "Library Information Science and Technology Abstracts (LISTA)",
         "access": "",
-        "url": "https://urldefense.com/v3/__https:/search.ebscohost.com/login.aspx?authtype=sso&custid=s1131660&groupid=main&profile=ehost&defaultdb=lxh__;!!PAKc-5URQlI!9Zu7lF7UbtETWEnzX_S15j8G8w8D_Wx9Kn0u1A_vL_G0NPTbFNkSYyKJ7hB5AwnLVWvDnhQx5x4Lxys-aDkSzg$",
+        "url": "https://search.ebscohost.com/login.aspx?authtype=sso&custid=s1131660&groupid=main&profile=ehost&defaultdb=lxh",
         "keywords": "Information science; Information and computer systems",
         "description": "Library, Information Science & Technology Abstracts (LISTA) indexes journals, books, research reports and proceedings. Subject coverage includes librarianship, classification, cataloging, bibliometrics, online information retrieval, information management and more. Coverage in the database extends back as far as the mid-1960s. Subjects: Automation; Care and restoration of books; Cataloging; Censorship; Circulation procedures; Classification; Copyright; Electronic resources and ERM systems; Electronic searching; Government aid; Library equipment and supplies; Public relations; Publishing; Rare books; Reference services Quote.",
         "disciplines": [
@@ -1247,7 +1247,7 @@
     {
         "title": "Open Educational Resources",
         "access": "",
-        "url": "https://www.tudelft.nl/en/library/collections/open-educational-resources/",
+        "url": "https://www.tudelft.nl/en/library/collections/educational-resources/open-educational-resources",
         "keywords": "Education",
         "description": "This web page provides an overview of Open Educational Resources (OER) from TU Delft and worldwide. OER are teaching and learning materials that you may freely use and reuse at no cost, and without needing to ask permission. Curated resources include Open Courseware, TU Delft Open Textbooks, TU Delft MOOCs (Massive Open Online Courses), Open Textbooks, Open Courses and course material, and Open multimedia.",
         "disciplines": [
@@ -1258,7 +1258,7 @@
     {
         "title": "Open Educational Resources",
         "access": "",
-        "url": "https://www.tudelft.nl/en/library/collections/open-educational-resources/",
+        "url": "https://www.tudelft.nl/en/library/collections/educational-resources/open-educational-resources",
         "keywords": "Education",
         "description": "This web page provides an overview of Open Educational Resources (OER) from TU Delft and worldwide. OER are teaching and learning materials that you may freely use and reuse at no cost, and without needing to ask permission. Curated resources include Open Courseware, TU Delft Open Textbooks, TU Delft MOOCs (Massive Open Online Courses), Open Textbooks, Open Courses and course material, and Open multimedia.",
         "disciplines": [
@@ -1278,9 +1278,20 @@
         "type": "articles"
     },
     {
+        "title": "OpenAlex",
+        "access": "",
+        "url": "https://openalex.org/",
+        "keywords": "Scientific research; Information systems, databases",
+        "description": "OpenAlex is a fully open bibliographic database providing access to the global research system, serving as an open alternative to proprietary services. It covers all scholarly disciplines, including non-English works, research from the Global South, and grey literature. Its web interface allows users to query metadata for works—for example, by title, abstract, authors, institutions, and sources—supporting Boolean searches and faceted filtering on attributes such as language, corresponding authors, funders, Sustainable Development Goals, and more. The interface displays useful statistics, citation counts, and links to available full texts, while the underlying data includes metrics such as Field-Weighted Citation Impact (FWCI). The complete dataset, offered under a CC0 license, is accessible via a powerful API and data snapshots. The API provides granular details, including comprehensive open access information such as specific license, version, and repository location.",
+        "disciplines": [
+            "All"
+        ],
+        "type": "articles"
+    },
+    {
         "title": "OpenDissertations",
         "access": "",
-        "url": "https://urldefense.com/v3/__https:/search.ebscohost.com/login.aspx?authtype=sso&custid=s1131660&groupid=main&profile=ehost&defaultdb=ddu__;!!PAKc-5URQlI!9Zu7lF7UbtETWEnzX_S15j8G8w8D_Wx9Kn0u1A_vL_G0NPTbFNkSYyKJ7hB5AwnLVWvDnhQx5x4LxyuvgxofjA$",
+        "url": "https://search.ebscohost.com/login.aspx?authtype=sso&custid=s1131660&groupid=main&profile=ehost&defaultdb=ddu",
         "keywords": "Scientific research",
         "description": "OpenDissertations is an open-access database built to assist researchers in locating both historic and contemporary dissertations and theses. It incorporates EBSCO’s previously released American Doctoral Dissertations, and features additional dissertation metadata contributed by select colleges and universities from around the world.",
         "disciplines": [
@@ -1302,7 +1313,7 @@
     {
         "title": "O'Reilly for Higher Education",
         "access": "",
-        "url": "https://urldefense.com/v3/__http:/tudelft.idm.oclc.org/login?url=https:**Awww.oreilly.com*library-access**Aemail=*5Eu__;Ly8vLz8l!!PAKc-5URQlI!8W9eEbnUrNrYfIegUl04sEMbKaoAYY4hlqVPI4Ap8mbkth9G-XwZMls3X8EqBqmYQBtJ0UzEpwI-ZY2Yby9mRrA$",
+        "url": "http://tudelft.idm.oclc.org/login?url=https://www.oreilly.com/library-access/?email=%5eu",
         "keywords": "Computer systems and computer networks; Information science; Informatics general; Business information systems",
         "description": "The O'Reilly Higher Education Platform provides access to an extensive library of e-books, video courses, interactive learning paths, and case studies from renowned publishers and industry experts. The content covers a diverse range of subjects, including computer science, data science, business, engineering, and many others. Users can explore topics such as programming languages, machine learning, cybersecurity, and project management, among others. One of the standout features of the platform is its focus on hands-on learning. Users can access virtual labs and coding environments to practice their skills and gain practical experience. These interactive exercises and simulations enable learners to apply theoretical concepts in a real-world context.",
         "disciplines": [
@@ -1551,23 +1562,23 @@
         "title": "SciFinder-n",
         "access": "A one-time registration with NetID is required. Go to: https://www.lib.tudelft.nl/scifinderregistration/",
         "url": "https://scifinder-n.cas.org/",
-        "keywords": "Biomedical engineering; chemisty; Materials engineering; Scientific research",
-        "description": "SciFinder-n is a research discovery tool that allows you to explore the CAS databases containing literature from many scientific disciplines including biomedical sciences, chemistry, engineering, materials science, agricultural science, and more. SciFinder-n retrieves information contained in databases produced by Chemical Abstracts Service (CAS) as well as in the MEDLINE database of the National Library of Medicine (NLM). SciFinder-n features the CAS Content Collection: Substances, CAS References, CAS Reactions, CAS Chemical Supplier Insights, Chemical Regulation and CAS Markush Representations in Patents. The Substances module contain chemical names, structures, CAS Registry Numbers and covers organic and inorganic substances, including alloys, coordination compounds, minerals, mixtures, polymers, and salts, protein and nucleic acid sequences and enriched with experimental and predicted property data and spectra. CAS References are sourced from thousands of journals, patent authorities as well as technical reports, books, conference proceedings and dissertations. They are also enhanced with English language summaries for non-English publications, standardized CAS Lexicon terminology indexing, cited and citing references, legal status, and direct links to the full-text publications (where available). CAS Reactions provides a current and reliable source of synthetic details sourced from journals, patents, dissertations, and seminal reference works. This module covers reactions including organometallics, total syntheses of natural products, and biotransformation reactions which are ehanced with yield data, detailed reaction conditions, and experimental procedures. CAS Chemical Supplier Insights provides an up-to-date resource for finding commercially available chemicals, including available quantities, prices, and supplier contact information. Chemical Regulations covers a vast number of unique chemical substances, as well as information from numerous regulatory inventories and lists. Finally, CAS Markush Representations in Patents are prepared by CAS to make them searchable to ensure that your queries don’t miss critical documents. A one-time registration with NetID is required. Go to: https://www.lib.tudelft.nl/scifinderregistration/",
-        "disciplines": [
-            "All"
-        ],
-        "type": "articles"
-    },
-    {
-        "title": "SciFinder-n",
-        "access": "A one-time registration with NetID is required. Go to: https://www.lib.tudelft.nl/scifinderregistration/",
-        "url": "https://scifinder-n.cas.org/",
         "keywords": "Biomedical engineering; Chemistry; Materials engineering; Scientific research",
         "description": "SciFinder-n is a research discovery tool that allows you to explore the CAS databases containing literature from many scientific disciplines including biomedical sciences, chemistry, engineering, materials science, agricultural science, and more. SciFinder-n retrieves information contained in databases produced by Chemical Abstracts Service (CAS) as well as in the MEDLINE database of the National Library of Medicine (NLM). SciFinder-n features the CAS Content Collection: Substances, CAS References, CAS Reactions, CAS Chemical Supplier Insights, Chemical Regulation and CAS Markush Representations in Patents. The Substances module contain chemical names, structures, CAS Registry Numbers and covers organic and inorganic substances, including alloys, coordination compounds, minerals, mixtures, polymers, and salts, protein and nucleic acid sequences and enriched with experimental and predicted property data and spectra. CAS References are sourced from thousands of journals, patent authorities as well as technical reports, books, conference proceedings and dissertations. They are also enhanced with English language summaries for non-English publications, standardized CAS Lexicon terminology indexing, cited and citing references, legal status, and direct links to the full-text publications (where available). CAS Reactions provides a current and reliable source of synthetic details sourced from journals, patents, dissertations, and seminal reference works. This module covers reactions including organometallics, total syntheses of natural products, and biotransformation reactions which are ehanced with yield data, detailed reaction conditions, and experimental procedures. CAS Chemical Supplier Insights provides an up-to-date resource for finding commercially available chemicals, including available quantities, prices, and supplier contact information. Chemical Regulations covers a vast number of unique chemical substances, as well as information from numerous regulatory inventories and lists. Finally, CAS Markush Representations in Patents are prepared by CAS to make them searchable to ensure that your queries don’t miss critical documents. A one-time registration with NetID is required. Go to: https://www.lib.tudelft.nl/scifinderregistration/",
         "disciplines": [
             "All"
         ],
         "type": "patent information"
+    },
+    {
+        "title": "SciFinder-n",
+        "access": "A one-time registration with NetID is required. Go to: https://www.lib.tudelft.nl/scifinderregistration/",
+        "url": "https://scifinder-n.cas.org/",
+        "keywords": "Biomedical engineering; chemisty; Materials engineering; Scientific research",
+        "description": "SciFinder-n is a research discovery tool that allows you to explore the CAS databases containing literature from many scientific disciplines including biomedical sciences, chemistry, engineering, materials science, agricultural science, and more. SciFinder-n retrieves information contained in databases produced by Chemical Abstracts Service (CAS) as well as in the MEDLINE database of the National Library of Medicine (NLM). SciFinder-n features the CAS Content Collection: Substances, CAS References, CAS Reactions, CAS Chemical Supplier Insights, Chemical Regulation and CAS Markush Representations in Patents. The Substances module contain chemical names, structures, CAS Registry Numbers and covers organic and inorganic substances, including alloys, coordination compounds, minerals, mixtures, polymers, and salts, protein and nucleic acid sequences and enriched with experimental and predicted property data and spectra. CAS References are sourced from thousands of journals, patent authorities as well as technical reports, books, conference proceedings and dissertations. They are also enhanced with English language summaries for non-English publications, standardized CAS Lexicon terminology indexing, cited and citing references, legal status, and direct links to the full-text publications (where available). CAS Reactions provides a current and reliable source of synthetic details sourced from journals, patents, dissertations, and seminal reference works. This module covers reactions including organometallics, total syntheses of natural products, and biotransformation reactions which are ehanced with yield data, detailed reaction conditions, and experimental procedures. CAS Chemical Supplier Insights provides an up-to-date resource for finding commercially available chemicals, including available quantities, prices, and supplier contact information. Chemical Regulations covers a vast number of unique chemical substances, as well as information from numerous regulatory inventories and lists. Finally, CAS Markush Representations in Patents are prepared by CAS to make them searchable to ensure that your queries don’t miss critical documents. A one-time registration with NetID is required. Go to: https://www.lib.tudelft.nl/scifinderregistration/",
+        "disciplines": [
+            "All"
+        ],
+        "type": "articles"
     },
     {
         "title": "SciFinder-n (one-time registration)",
@@ -1662,7 +1673,7 @@
     {
         "title": "SGI-Line",
         "access": "",
-        "url": "https://www.sgi.se/en/research--learning/publikationer/om-sgi-line/search-litterature-in-sgi-line/",
+        "url": "https://www.sgi.se/en/research-and-development/publication",
         "keywords": "Geotechnics, underground construction; Environmental sciences; Geology",
         "description": "SGI-Line is a literature database containing references to international geotechnical and geoenvironmental literature in a broad context, from practical solutions to theoretical analysis. The database is one of a small number in the world specialized in geotechnical and geoenvironmental engineering. SGI-Line is produced by the Swedish Geotechnical Institute, Sweden. The main geotechnical areas of SGI-Line are: Foundation and Reinforcement, Soil and Rock Mechanics, Properties of Soil and Rock, Environmental Geotechnics, Site Investigations, Geology, Building materials, Energy, etc.",
         "disciplines": [
@@ -1737,7 +1748,7 @@
     {
         "title": "Teacher Reference Center",
         "access": "",
-        "url": "https://urldefense.com/v3/__https:/search.ebscohost.com/login.aspx?authtype=sso&custid=s1131660&groupid=main&profile=ehost&defaultdb=trh__;!!PAKc-5URQlI!9Zu7lF7UbtETWEnzX_S15j8G8w8D_Wx9Kn0u1A_vL_G0NPTbFNkSYyKJ7hB5AwnLVWvDnhQx5x4LxyuJ7bXCiA$",
+        "url": "https://search.ebscohost.com/login.aspx?authtype=sso&custid=s1131660&groupid=main&profile=ehost&defaultdb=trh",
         "keywords": "Education; Management; Mathematics",
         "description": "The research database for teachers, Teacher Reference Center (TRC) provides indexing and abstracts of peer-reviewed journals, trade journals and books. Subjects Include: Assessment; Best practices; Continuing education; Current pedagogical research; Curriculum development; Elementary education; Higher education; Instructional media; Language arts; Literacy standards; School administration; Science and mathematics; Teacher education.",
         "disciplines": [
@@ -1857,7 +1868,7 @@
     {
         "title": "Van Dale Online Woordenboeken",
         "access": "",
-        "url": "https://urldefense.com/v3/__https://surfconext.vandale.nl/api/zoeken/managesurfconextprocess__;!!PAKc-5URQlI!__RN6usA7ymxiLCH8mzI13C27bJ74lWcKzboWjaNoW-vfu2M6LrRaQxhrSkBZoe_TWXw5W5T7kMRAmJSfY_MaVaNNQ$",
+        "url": "https://surfconext.vandale.nl/api/zoeken/managesurfconextprocess",
         "keywords": "Language",
         "description": "Online access to a wide range of Van Dale dictionaries: Groot Woordenboek der Nederlandse Taal (\"Dikke Van Dale\", unabridged Dutch dictionary); Van Dale Nederlands Woordenboek (standard Dutch dictionary); Handboek Nederlands (Handbook Dutch); and Van Dale bilingual bidirectional databases: Nederlands-Engels (Dutch-English), Nederlands-Frans (Dutch-French), Nederlands-Duits (Dutch-German), Nederlands-Spaans (Dutch-Spanish), Nederlands-Italiaans (Dutch-Italian), Nederlands-Portugees (Dutch-Portuguese); Nederlands-Zweeds (Dutch-Swedish).",
         "disciplines": [
