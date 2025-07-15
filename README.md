@@ -52,22 +52,7 @@ bun install
 bun run fetch-databases.ts
 ```
 
-## Todo
-
-- [x] Overview of results beneath bar
-- [x] Integrate Library result count in flex box
-- [x] Fixed positions for results (with loading indicator)
-- [ ] Align buttons
-- [x] Add [databases](https://databases.tudl.tudelft.nl/)
-  - Based on [metadata](https://databases.tudl.tudelft.nl/wp-content/uploads/sites/20/databases_content_metadata.csv) file
-  - Prioritize titles, then abstract
-  - Show faculties as tags, link to [page](https://databases.tudl.tudelft.nl/?f=AE) with databases for specific faculty
-  - Show title, access info (if available), abstract (abbreviate), format
-  - Link directly to database
-  - Button to all databases
-  - Separate index from script
-  - View A-Z list
-- [ ] Automatically publish build as release and remove build folder from repo
+Through a [GitHub Action](.github/workflows/databases.yml) this script is triggered every day at midnight. Changes are automatically committed to the repository. The index is deployed to `https://tu-delft-library.github.io/one-box-search/databases.json` through GitHub Pages. The search script fetches this index in order to perform the search client-side.
 
 ---
 
