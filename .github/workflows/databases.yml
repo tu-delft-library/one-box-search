@@ -18,6 +18,8 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    outputs:
+      changes: ${{ steps.check_changes.outputs.changes }}
 
     steps:
       - name: Checkout
@@ -34,15 +36,22 @@ jobs:
           path: "data/"
           name: github-pages
       - name: Commit & push changes
+        id: check_changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .
-          git diff-index --quiet HEAD || git commit -m "generated with github action"
+          if git diff-index --quiet HEAD; then
+            echo "changes=false" >> $GITHUB_OUTPUT
+          else
+            git commit -m "Automatic publish from github.com/tu-delft-heritage/collective-access-data"
+            echo "changes=true" >> $GITHUB_OUTPUT
+          fi
           git push
 
   deploy:
-    needs: build
+    needs: refresh
+    if: needs.refresh.outputs.changes == 'true'
     permissions:
       pages: write
       id-token: write
