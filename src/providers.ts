@@ -1,11 +1,11 @@
 import { fetchJson } from "./functions";
-import databases from "../data/databases.json";
 import { columnFilter } from "./search";
 import type {
   NormalizedResults,
   DjehutySearchResult,
   RepositorySearchResult,
   WorldCatSearchResult,
+  DatabaseNormalized,
 } from "./types/types";
 
 const displayCount = 3;
@@ -101,22 +101,28 @@ export default [
       en: "Recommended resources for the TU Delft community",
       nl: "Aanbevolen bronnen voor de TU Delft gemeenschap",
     },
-    apiBaseUrl: "",
+    apiBaseUrl:
+      "https://tu-delft-library.github.io/one-box-search/databases.json",
     searchBaseUrl: "https://databases.tudl.tudelft.nl/?t=az&q=",
     getRecords: async function (query: string) {
       try {
-        const filter = columnFilter(["title", "keywords", "description"]);
-        const results = query ? databases.filter(filter(query)) : databases;
-        const normalizedResults: NormalizedResults = results
-          .slice(0, displayCount)
-          .map((d) => ({
-            title: d.title,
-            description:
-              d.description.split(" ").slice(0, 25).join(" ") + "...",
-            href: d.url,
-          }));
-        normalizedResults.count = results.length;
-        return normalizedResults;
+        const databases = await fetchJson(this.apiBaseUrl);
+        if (databases) {
+          const filter = columnFilter(["title", "keywords", "description"]);
+          const results = query
+            ? databases.results.filter(filter(query))
+            : databases.results;
+          const normalizedResults: NormalizedResults = results
+            .slice(0, displayCount)
+            .map((d: DatabaseNormalized) => ({
+              title: d.title,
+              description:
+                d.description.split(" ").slice(0, 25).join(" ") + "...",
+              href: d.url,
+            }));
+          normalizedResults.count = results.length;
+          return normalizedResults;
+        } else return null;
       } catch (err) {
         console.log(err);
         return null;
