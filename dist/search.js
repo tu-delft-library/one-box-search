@@ -40,7 +40,8 @@ var providers_default = [
     searchBaseUrl: "https://tudelft.on.worldcat.org/search?queryString=",
     getRecords: async function(query) {
       try {
-        const response = await fetchJson(this.apiBaseUrl + (query || "*"));
+        const encodedQuery = encodeURIComponent(query);
+        const response = await fetchJson(this.apiBaseUrl + (encodedQuery || "*"));
         if (response) {
           const results = response.results;
           if (results.briefRecords) {
@@ -77,7 +78,7 @@ var providers_default = [
     searchBaseUrl: "https://repository.tudelft.nl/search?search_term=",
     getRecords: async function(query) {
       try {
-        const response = await fetchJson(this.apiBaseUrl + query);
+        const response = await fetchJson(this.apiBaseUrl + encodeURIComponent(query));
         if (response) {
           const results = response.results;
           const count = +results.total;

@@ -27,7 +27,10 @@ export default [
     getRecords: async function (query: string) {
       try {
         // WorldCat doesn't accept an empty search string, using asterisk instead
-        const response = await fetchJson(this.apiBaseUrl + (query || "*"));
+        const encodedQuery = encodeURIComponent(query);
+        const response = await fetchJson(
+          this.apiBaseUrl + (encodedQuery || "*")
+        );
         if (response) {
           const results = response.results as WorldCatSearchResult;
           if (results.briefRecords) {
@@ -65,7 +68,9 @@ export default [
     searchBaseUrl: "https://repository.tudelft.nl/search?search_term=",
     getRecords: async function (query: string) {
       try {
-        const response = await fetchJson(this.apiBaseUrl + query);
+        const response = await fetchJson(
+          this.apiBaseUrl + encodeURIComponent(query)
+        );
         if (response) {
           const results = response.results as RepositorySearchResult;
           const count = +results.total;
