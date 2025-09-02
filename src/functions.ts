@@ -187,7 +187,7 @@ export async function createResults(
         provider.description,
         records,
         records?.count,
-        provider.searchBaseUrl + searchInput
+        provider.searchBaseUrl + encodeURIComponent(searchInput)
       );
       container.innerHTML = typoResults;
     });

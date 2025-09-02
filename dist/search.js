@@ -367,7 +367,7 @@ async function createResults(searchInput, languageInput) {
         grid.append(container);
       }
       const records = await provider.getRecords(searchInput);
-      const typoResults = createTypoResults(provider.title, provider.description, records, records?.count, provider.searchBaseUrl + searchInput);
+      const typoResults = createTypoResults(provider.title, provider.description, records, records?.count, provider.searchBaseUrl + encodeURIComponent(searchInput));
       container.innerHTML = typoResults;
     });
   }
