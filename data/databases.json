@@ -301,10 +301,10 @@
     },
     {
         "title": "BouwZo (formerly ISSO Open)",
-        "access": "Login via SurfConext (SSO) to access and create a personal profile",
+        "access": "Login via SurfConext (SSO) to access and create a personal profile. Note: If you receive a message that the maximum number of license slots has been reached, please email library@tudelft.nl for assistance.",
         "url": "https://bouwzo.nl/search?Publisher=ISSO",
         "keywords": "Building physics and services; Construction materials and building structures; Safety engineering",
-        "description": "BouwZo is the Dutch knowledge platform for construction and installation professionals, developed by ISSO, the Dutch Knowledge Centre for the building services industry. It provides access to a wide array of resources, including guidelines, standards, regulations, checklists, research reports, and practical tools. The platform incorporates contributions from organisations such as InstallQ and Rijksvastgoedbedrijf, ensuring authoritative and comprehensive coverage. Users can log in via SurfConext (SSO) to access the platform and create a personalised profile. BouwZo is available exclusively in Dutch.",
+        "description": "BouwZo is the Dutch knowledge platform for construction and installation professionals, developed by ISSO, the Dutch Knowledge Centre for the building services industry. It provides access to a wide array of resources, including guidelines, standards, regulations, checklists, research reports, and practical tools. The platform incorporates contributions from organisations such as InstallQ and Rijksvastgoedbedrijf, ensuring authoritative and comprehensive coverage. Users can log in via SurfConext (SSO) to access the platform and create a personal profile. BouwZo is available exclusively in Dutch.",
         "disciplines": [
             "Civil Engineering",
             "Architecture"
@@ -1400,7 +1400,7 @@
         "type": "articles"
     },
     {
-        "title": "Proquest Dissertation & Theses Citation Index",
+        "title": "ProQuest Dissertation & Theses Citation Index",
         "access": "TU Delft has no subscription to access the full text on ProQuest Dissertations and Theses Global",
         "url": "https://www.webofscience.com/wos/pqdt/basic-search",
         "keywords": "Scientific research",
@@ -1411,7 +1411,7 @@
         "type": "theses"
     },
     {
-        "title": "Proquest One Business (formerly ABI/INFORM)",
+        "title": "ProQuest One Business (formerly ABI/INFORM)",
         "access": "",
         "url": "https://www.proquest.com/pq1business",
         "keywords": "Business economics; Product development and marketing; Economics; Management",
@@ -1712,7 +1712,7 @@
         "type": "articles"
     },
     {
-        "title": "Statista.com",
+        "title": "Statista",
         "access": "",
         "url": "https://www.statista.com/",
         "keywords": "Business information systems; Business economics; Consumer behaviour",
