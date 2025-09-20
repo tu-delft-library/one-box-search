@@ -1253,7 +1253,7 @@
         "disciplines": [
             "All"
         ],
-        "type": "educational resource"
+        "type": "reference"
     },
     {
         "title": "Open Educational Resources",
@@ -1264,7 +1264,7 @@
         "disciplines": [
             "All"
         ],
-        "type": "reference"
+        "type": "educational resource"
     },
     {
         "title": "OpenAIRE",
@@ -1589,7 +1589,7 @@
         "disciplines": [
             "All"
         ],
-        "type": "patent information"
+        "type": "articles"
     },
     {
         "title": "SciFinder-n (one-time registration)",
@@ -1600,7 +1600,7 @@
         "disciplines": [
             "All"
         ],
-        "type": "articles"
+        "type": "patent information"
     },
     {
         "title": "SCImago Journal & Country Rank",
@@ -1809,6 +1809,28 @@
             "Technology, Policy and Management"
         ],
         "type": "reference"
+    },
+    {
+        "title": "TU Delft OPEN Books",
+        "access": "",
+        "url": "https://books.open.tudelft.nl/",
+        "keywords": "Scientific research",
+        "description": "TU Delft OPEN Publishing publishes monographs, edited books, (interactive) textbooks, and conference books across a wide range of disciplines, including applied sciences, civil engineering, geosciences, electrical engineering, mathematics, computer science, industrial design engineering, mechanical engineering, technology, policy and management, aerospace engineering, and architecture and the built environment. Publications are offered under the \"diamond open access\" model, ensuring they are free to read and incur no costs for authors. To submit a book proposal or find more information, please consult the Information for Authors and Editors page or directly contact TU Delft OPEN Publishing.",
+        "disciplines": [
+            "All"
+        ],
+        "type": "e-books"
+    },
+    {
+        "title": "TU Delft OPEN Journals",
+        "access": "",
+        "url": "https://journals.open.tudelft.nl/",
+        "keywords": "Scientific research",
+        "description": "TU Delft OPEN Journals is the university’s Diamond Open Access publishing platform, offering a growing list of peer-reviewed journals across disciplines. It includes journals on topics such as engineering, architecture, urbanism, coastal studies, aviation, and safety science. All content is freely accessible, with no publishing fees, supporting open science and responsible research practices. This platform provides researchers with a primary venue for sharing high-quality, interdisciplinary work while promoting open access to knowledge. For those interested in establishing a new publication, inquiries about starting a new Diamond OA journal are welcome.",
+        "disciplines": [
+            "All"
+        ],
+        "type": "articles"
     },
     {
         "title": "TU Delft Repository",
