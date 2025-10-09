@@ -25,6 +25,15 @@ function escapeRegExp(text) {
 
 // src/providers.ts
 var displayCount = 3;
+var noResults = (err) => {
+  const arr = new Array;
+  arr.count = 0;
+  if (err) {
+    console.error(err);
+    arr.error = true;
+  }
+  return arr;
+};
 var providers_default = [
   {
     id: "catalogue",
@@ -55,12 +64,11 @@ var providers_default = [
             normalizedResults.count = results.numberOfRecords;
             return normalizedResults;
           } else
-            return null;
+            return noResults();
         } else
-          return null;
+          return noResults();
       } catch (err) {
-        console.log(err);
-        return null;
+        return noResults(err);
       }
     }
   },
@@ -93,12 +101,11 @@ var providers_default = [
             normalizedResults.count = count;
             return normalizedResults;
           } else
-            return null;
+            return noResults();
         } else
-          return null;
+          return noResults();
       } catch (err) {
-        console.log(err);
-        return null;
+        return noResults(err);
       }
     }
   },
@@ -112,7 +119,7 @@ var providers_default = [
       en: "Recommended resources for the TU Delft community",
       nl: "Aanbevolen bronnen voor de TU Delft gemeenschap"
     },
-    apiBaseUrl: "https://tu-delft-library.github.io/one-box-search/databases.json",
+    apiBaseUrl: "https://filelist.tudelft.nl/Library/Zoeken/databases.json",
     searchBaseUrl: "https://databases.tudl.tudelft.nl/?t=az&q=",
     getRecords: async function(query) {
       try {
@@ -128,10 +135,9 @@ var providers_default = [
           normalizedResults.count = results.length;
           return normalizedResults;
         } else
-          return null;
+          return noResults();
       } catch (err) {
-        console.log(err);
-        return null;
+        return noResults(err);
       }
     }
   },
@@ -166,12 +172,11 @@ var providers_default = [
             normalizedResults.count = countFromHeaders ? +countFromHeaders : undefined;
             return normalizedResults;
           } else
-            return null;
+            return noResults();
         } else
-          return null;
+          return noResults();
       } catch (err) {
-        console.log(err);
-        return null;
+        return noResults(err);
       }
     }
   },
@@ -218,12 +223,11 @@ var providers_default = [
             normalizedResults.count = results.results[0].found;
             return normalizedResults;
           } else
-            return null;
+            return noResults();
         } else
-          return null;
+          return noResults();
       } catch (err) {
-        console.log(err);
-        return null;
+        return noResults(err);
       }
     }
   }
@@ -274,16 +278,23 @@ function createTypoRow(props) {
     </a>
   `;
 }
-function createTypoResults(title, description, records, count, resultsUrl) {
+function createTypoResults(title, description, records, resultsUrl) {
+  const { count, error } = records;
   return html`
     <div class="t3ce frame-type-gridelements_pi1">
       <div class="grid-background--white grid-background--boxed">
-        ${records && records.length && count ? count.toLocaleString() + " " + t({ en: "results", nl: "resultaten" }) : records && records.length ? t({ en: "Top 3 results", nl: "Top 3 resultaten" }) : t({ en: "No results", nl: "Geen resultaten" })}
+        ${records && records.length && count ? count.toLocaleString() + t({ en: " results", nl: " resultaten" }) : records && records.length ? t({ en: "Top 3 results", nl: "Top 3 resultaten" }) : error ? t({
+    en: "Results could not be fetched",
+    nl: "Resultaten konden niet geladen worden"
+  }) : t({ en: "No results", nl: "Geen resultaten" })}
         <h2>${t(title)}</h2>
         <p><i>${t(description)}</i></p>
         <div class="content-container">
           ${records && records.length ? records.map(createTypoRow).join(`
-`) : ""}
+`) : error ? `<div class="news-summary" style="color:#e64616">` + t({
+    en: "Access results through the button below",
+    nl: "Toegang tot de resultaten via onderstaande knop"
+  }) + "</div>" : ""}
           <div class="t3ce frame-type-sitetud_singlebutton">
             <a
               href="${resultsUrl}"
@@ -368,7 +379,7 @@ async function createResults(searchInput, languageInput) {
         grid.append(container);
       }
       const records = await provider.getRecords(searchInput);
-      const typoResults = createTypoResults(provider.title, provider.description, records, records?.count, provider.searchBaseUrl + encodeURIComponent(searchInput));
+      const typoResults = createTypoResults(provider.title, provider.description, records, provider.searchBaseUrl + encodeURIComponent(searchInput));
       container.innerHTML = typoResults;
     });
   }

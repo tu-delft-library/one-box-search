@@ -10,6 +10,16 @@ import type {
 
 const displayCount = 3;
 
+const noResults = (err?: unknown) => {
+  const arr: NormalizedResults = new Array();
+  arr.count = 0;
+  if (err) {
+    console.error(err);
+    arr.error = true;
+  }
+  return arr;
+};
+
 // Results appear on the page in the order below!
 export default [
   {
@@ -45,11 +55,10 @@ export default [
               }));
             normalizedResults.count = results.numberOfRecords;
             return normalizedResults;
-          } else return null;
-        } else return null;
+          } else return noResults();
+        } else return noResults();
       } catch (err) {
-        console.log(err);
-        return null;
+        return noResults(err);
       }
     },
   },
@@ -88,11 +97,10 @@ export default [
               }));
             normalizedResults.count = count;
             return normalizedResults;
-          } else return null;
-        } else return null;
+          } else return noResults();
+        } else return noResults();
       } catch (err) {
-        console.log(err);
-        return null;
+        return noResults(err);
       }
     },
   },
@@ -106,8 +114,9 @@ export default [
       en: "Recommended resources for the TU Delft community",
       nl: "Aanbevolen bronnen voor de TU Delft gemeenschap",
     },
-    apiBaseUrl:
-      "https://tu-delft-library.github.io/one-box-search/databases.json",
+    apiBaseUrl: "https://filelist.tudelft.nl/Library/Zoeken/databases.json",
+    // Not allowed due to new content security policy
+    // "https://tu-delft-library.github.io/one-box-search/databases.json",
     searchBaseUrl: "https://databases.tudl.tudelft.nl/?t=az&q=",
     getRecords: async function (query: string) {
       try {
@@ -127,10 +136,9 @@ export default [
             }));
           normalizedResults.count = results.length;
           return normalizedResults;
-        } else return null;
+        } else return noResults();
       } catch (err) {
-        console.log(err);
-        return null;
+        return noResults(err);
       }
     },
   },
@@ -169,11 +177,10 @@ export default [
               ? +countFromHeaders
               : undefined;
             return normalizedResults;
-          } else return null;
-        } else return null;
+          } else return noResults();
+        } else return noResults();
       } catch (err) {
-        console.log(err);
-        return null;
+        return noResults(err);
       }
     },
   },
@@ -229,11 +236,10 @@ export default [
               }));
             normalizedResults.count = results.results[0].found;
             return normalizedResults;
-          } else return null;
-        } else return null;
+          } else return noResults();
+        } else return noResults();
       } catch (err) {
-        console.log(err);
-        return null;
+        return noResults(err);
       }
     },
   },

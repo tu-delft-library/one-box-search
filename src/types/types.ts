@@ -82,7 +82,10 @@ export type NormalizedResults = {
   description?: string;
   href?: string;
   date?: string;
-}[] & { count?: undefined | number };
+}[] & {
+  count?: undefined | number;
+  error?: boolean;
+};
 
 export type DatabaseMetadata = {
   ID: string;

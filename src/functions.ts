@@ -1,5 +1,5 @@
 import searchProviders from "./providers";
-import type { Translations } from "./types/types";
+import type { NormalizedResults, Translations } from "./types/types";
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/raw#building_an_identity_tag
 export const html = (strings: TemplateStringsArray, ...values: any[]) =>
@@ -58,25 +58,35 @@ function createTypoRow(props: any) {
 function createTypoResults(
   title: Translations,
   description: Translations,
-  records: null | any[],
-  count: number | undefined,
+  records: NormalizedResults,
   resultsUrl: string
 ) {
+  const { count, error } = records;
   return html`
     <div class="t3ce frame-type-gridelements_pi1">
       <div class="grid-background--white grid-background--boxed">
         ${records && records.length && count
-          ? count.toLocaleString() +
-            " " +
-            t({ en: "results", nl: "resultaten" })
+          ? count.toLocaleString() + t({ en: " results", nl: " resultaten" })
           : records && records.length
           ? t({ en: "Top 3 results", nl: "Top 3 resultaten" })
+          : error
+          ? t({
+              en: "Results could not be fetched",
+              nl: "Resultaten konden niet geladen worden",
+            })
           : t({ en: "No results", nl: "Geen resultaten" })}
         <h2>${t(title)}</h2>
         <p><i>${t(description)}</i></p>
         <div class="content-container">
           ${records && records.length
             ? records.map(createTypoRow).join("\n")
+            : error
+            ? `<div class="news-summary" style="color:#e64616">` +
+              t({
+                en: "Access results through the button below",
+                nl: "Toegang tot de resultaten via onderstaande knop",
+              }) +
+              "</div>"
             : ""}
           <div class="t3ce frame-type-sitetud_singlebutton">
             <a
@@ -186,7 +196,6 @@ export async function createResults(
         provider.title,
         provider.description,
         records,
-        records?.count,
         provider.searchBaseUrl + encodeURIComponent(searchInput)
       );
       container.innerHTML = typoResults;
