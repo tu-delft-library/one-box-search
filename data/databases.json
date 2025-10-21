@@ -541,6 +541,17 @@
         "type": "patent information"
     },
     {
+        "title": "Diamond Discovery Hub",
+        "access": "",
+        "url": "https://ddh.diamas.org/en/search?fullyDiamond=true",
+        "keywords": "Scientific research",
+        "description": "The Diamond Discovery Hub (DDH) database is a comprehensive, searchable directory of Diamond Open Access journals, curated as part of the European DIAMAS project. It serves as a central discovery tool for researchers, students, and academic staff, exclusively featuring scholarly journals that are free to read and publish in, while adhering to open licensing standards. A key feature is its rigorous verification process, ensuring all listed journals meet the \"fully diamond\" criteria, thus upholding high standards of scholarly communication, accessibility, and academic integrity. Users can search journals by keyword and refine results using filters for license types, languages, and countries.",
+        "disciplines": [
+            "All"
+        ],
+        "type": "reference"
+    },
+    {
         "title": "Dimensions",
         "access": "Please note that in order to fully view and access all features you must log in with your TU Delft mail address and your TU Delft credentials.",
         "url": "https://app.dimensions.ai/discover/publication",
@@ -927,7 +938,7 @@
     {
         "title": "Janes",
         "access": "Log in with your NETID with SURFconext.\r\r\nCheck 'My subscriptions' and click on one of the TU Delft subscriptions 'Air & Space Module', 'Sea Module', 'News Module' and 'Company Intelligence'.",
-        "url": "https://customer.janes.com/portal/Account/EnterpriseLogin?connection=surfNL",
+        "url": "https://login.janes.com/login/authorize?response_type=token&scope=openid&client_id=3uALB2HhLaPB8HvML72D4L8vYRaNWepC&connection=surfNL&redirect_uri=https://customerportal.janes.com",
         "keywords": "Aeronautical engineering; Marine building and outfitting; Aeronautics and aircraft; Naval architecture",
         "description": "The Janes database provides a comprehensive range of defense, security, aerospace, and transportation information. TU Delft subscribes to the following modules: Janes Air & Space Module, Janes Sea Module and Janes News Module and Company Intelligence. Air & Space provides a reference portfolio of air and space platforms, systems and subsystems under development, in production and in service with air forces around the world. Module content: Aero Engines; JAWA: Development & Production, In Service, Unmanned; Space Systems & Industry; Flight Avionics; Weapons: Air-Launched; Weapons: Naval; Weapons: Strategic; C4ISR & Mission Systems: Air; C4ISR & Mission Systems: Joint and Common; Simulation & Training; LWP: Artillery & Air Defence. The Sea Module offers access to all Janes military naval and military sea-defence content on platforms, weapons, and systems in development, in production and in service. Module content: Fighting Ships; Unmanned Maritime Vehicles; Weapons: Naval; Weapons: Strategic; Weapons: Air-Launched; C4ISR & Mission Systems: Maritime; C4ISR & Mission Systems: Joint and Common; Simulation & Training. The News Module includes: Defence Weekly; Navy International; International Defence Review; Defence Industry News; Intelligence Review; Intelligence Weekly; Country Risk Daily Report; Militant Propaganda Analysis; Terrorism & Insurgency Monitor. Janes Company Intelligence details 20K+ civil and government entities across the defence and aerospace industry. Log in with your NETID with SURFconext. Check 'My subscriptions' and click on one of the TU Delft subscriptions 'Air & Space Module', 'Sea Module', 'News Module' and 'Company Intelligence'.",
         "disciplines": [
@@ -1138,18 +1149,6 @@
             "All"
         ],
         "type": "articles"
-    },
-    {
-        "title": "NIBE Nederlands Instituut voor Bouwbiologie en Ecologie",
-        "access": "Create a personal account to access the database.",
-        "url": "https://www.nibe.info/nl",
-        "keywords": "Environmental technology; Building technology and construction process; Safety engineering; Construction materials and building structures",
-        "description": "The NIBE.INFO database contains a vast set of health and environmental and cost data of building products. The database is based on the Nationale Milieu Database (National Environmental Database). You have to create a personal account to access the database.",
-        "disciplines": [
-            "Architecture",
-            "Civil Engineering"
-        ],
-        "type": "reference"
     },
     {
         "title": "NIST Atomic Reference Data for Electronic Structure Calculations",
