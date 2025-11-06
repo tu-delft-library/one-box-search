@@ -119,7 +119,7 @@ var providers_default = [
       en: "Recommended resources for the TU Delft community",
       nl: "Aanbevolen bronnen voor de TU Delft gemeenschap"
     },
-    apiBaseUrl: "https://filelist.tudelft.nl/Library/Zoeken/databases.json",
+    apiBaseUrl: "https://tu-delft-library.github.io/one-box-search/databases.json",
     searchBaseUrl: "https://databases.tudl.tudelft.nl/?t=az&q=",
     getRecords: async function(query) {
       try {
@@ -166,7 +166,7 @@ var providers_default = [
               title: d.title,
               authors: d.authors.map((author) => author.full_name).join(", "),
               href: "https://doi.org/" + d.doi,
-              date: d.published_date
+              date: new Date(d.published_date).getFullYear()
             }));
             const countFromHeaders = response.headers.get("Number-Of-Records");
             normalizedResults.count = countFromHeaders ? +countFromHeaders : undefined;

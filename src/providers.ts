@@ -114,9 +114,10 @@ export default [
       en: "Recommended resources for the TU Delft community",
       nl: "Aanbevolen bronnen voor de TU Delft gemeenschap",
     },
-    apiBaseUrl: "https://filelist.tudelft.nl/Library/Zoeken/databases.json",
-    // Not allowed due to new content security policy
-    // "https://tu-delft-library.github.io/one-box-search/databases.json",
+    apiBaseUrl:
+      "https://tu-delft-library.github.io/one-box-search/databases.json",
+    // If not allowed due to content security policy, use the url below
+    // apiBaseUrl: "https://filelist.tudelft.nl/Library/Zoeken/databases.json",
     searchBaseUrl: "https://databases.tudl.tudelft.nl/?t=az&q=",
     getRecords: async function (query: string) {
       try {
@@ -169,7 +170,7 @@ export default [
                 title: d.title,
                 authors: d.authors.map((author) => author.full_name).join(", "),
                 href: "https://doi.org/" + d.doi,
-                date: d.published_date,
+                date: new Date(d.published_date).getFullYear(),
               }));
             // Getting count from response headers
             const countFromHeaders = response.headers.get("Number-Of-Records");
