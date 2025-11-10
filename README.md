@@ -43,6 +43,24 @@ Make sure to enable `Allow access to file URLs` for Tampermonkey under Manage Ex
 
 Visit the following URL to test the script: [https://www.tudelft.nl/library/zoeken-dev](https://www.tudelft.nl/library/zoeken-dev)
 
+## Requirements
+
+For adding new APIs, please take note of the following requirements:
+
+- HTTPS API endpoint that accepts queries and returns a JSON response
+- Friendly CORS headers
+- Pagination / limits on returned responses (currently only three results are shown)
+- Total result count (can be included as a HTTP response header if needed)
+- Possibility to link to full search results
+- For individual items (list might be expanded):
+  - Title <string>
+  - Author(s) <string[]>
+  - Date in a [parsable format](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format) <string|number>
+  - URL for item <string>
+  - Description <string>
+  - Object type(s) <string[]>
+  - [IIIF Image API](https://iiif.io/api/image/3.0/) endpoint (optional) <string>
+
 ## Databases
 
 In order to search the [databases](https://databases.tudl.tudelft.nl/), this repository includes a static json index of this resource in the `./data` directory. It can be refreshed by running:
