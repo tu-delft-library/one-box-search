@@ -53,13 +53,15 @@ For adding new APIs, please take note of the following requirements:
 - Total result count (can be included as a HTTP response header if needed)
 - Possibility to link to full search results
 - For individual items (list might be expanded):
-  - Title <string>
-  - Author(s) <string[]>
-  - Date in a [parsable format](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format) <string|number>
-  - URL for item <string>
-  - Description <string>
-  - Object type(s) <string[]>
-  - [IIIF Image API](https://iiif.io/api/image/3.0/) endpoint (optional) <string>
+  - Title (`string`)
+  - Author(s) (`string[]`)
+  - Date in a [parsable format](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format) (`string | number`)
+  - URL for item (`string`)
+  - Description (`string`)
+  - Object type(s) (`string[]`)
+  - [IIIF Image API](https://iiif.io/api/image/3.0/) endpoint (optional) (`string`)
+
+Currently all implemented APIs return different responses which are parsed using custom functions in `providers.ts`. The response format may therefore differ from what is indicated above.
 
 ## Databases
 
