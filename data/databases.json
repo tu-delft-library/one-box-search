@@ -926,7 +926,7 @@
     },
     {
         "title": "InView Essential",
-        "access": "TU Delft has access to InView Essential only. Log in with your TU Delft credentials through \"Student/Medewerker\".",
+        "access": "TU Delft has access to InView Essential only. Log in with your TU Delft credentials through \"Student/Medewerker\". After 14 November 2025, accounts that have not been anonymised will be deleted by Wolters Kluwer, resulting in the loss of all personal settings. If users later sign in via SURFconext, a new anonymous account will be created, and previous preferences will not be restored.",
         "url": "https://www.inview.nl/",
         "keywords": "Law; Legislation",
         "description": "InView is a research platform for legal, tax, financial, and government professionals. It consists of InView Essential (formerly known as Navigator) and InView Legal. InView Essential provides access to Dutch and international legal and fiscal information, including legislation, regulations, literature, commentaries, and case law. It also includes the Juridisch-Economisch Lexicon EN-NL and NL-EN. TU Delft has access to InView Essential only. Log in with your TU Delft credentials through \"Student/Medewerker\".",
@@ -1130,10 +1130,10 @@
     },
     {
         "title": "NEN Connect: Dutch Accepted Standards",
-        "access": "TU Delft provides access to the complete NEN standards collection. Login with your NETID with SURFconext",
+        "access": "TU Delft provides access to the complete NEN Dutch Accepted Standards (Nederlands Aanvaard) collection. Log in with your NETID via SURFconext. Two-factor authentication (2FA) is required to ensure secure access.",
         "url": "https://connect.nen.nl/Account/SSO/SURFconext",
         "keywords": "Standardisation",
-        "description": "NEN Connect is an online database managed by the Royal Netherlands Standardization Institute. It provides access to all Dutch standards (NEN), European (EN), and international standards (ISO, IEC) accepted in the Netherlands. TU Delft provides access to the complete NEN Dutch Accepted Standards (Nederlands Aanvaard) collection. Log in with your NETID with SURFconext.",
+        "description": "NEN Connect is an online database managed by the Royal Netherlands Standardization Institute. It provides access to all Dutch standards (NEN), European (EN), and international standards (ISO, IEC) accepted in the Netherlands. TU Delft provides access to the complete NEN Dutch Accepted Standards (Nederlands Aanvaard) collection. Log in with your NETID via SURFconext. Two-factor authentication (2FA) is required to ensure secure access.",
         "disciplines": [
             "All"
         ],
