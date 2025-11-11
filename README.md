@@ -47,7 +47,7 @@ Visit the following URL to test the script: [https://www.tudelft.nl/library/zoek
 
 For adding new APIs, please take note of the following requirements:
 
-- HTTPS API endpoint that accepts queries and returns a JSON response
+- An open HTTPS API endpoint that accepts queries and returns a JSON response (the script runs client-side so API keys will be exposed).
 - Friendly [CORS headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS)
 - Pagination / limits on returned responses (currently only three results are shown)
 - Total result count (can be included as a HTTP response header if needed)
