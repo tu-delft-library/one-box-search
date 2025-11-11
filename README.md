@@ -52,14 +52,18 @@ For adding new APIs, please take note of the following requirements:
 - Pagination / limits on returned responses (currently only three results are shown)
 - Total result count (can be included as a HTTP response header if needed)
 - Possibility to link to full search results
-- For individual items (list might be expanded):
-  - Title (`string`)
-  - Author(s) (`string[]`)
-  - Date in a [parsable format](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format) (`string | number`)
-  - URL for item (`string`)
-  - Description (`string`)
-  - Object type(s) (`string[]`)
-  - [IIIF Image API](https://iiif.io/api/image/3.0/) endpoint (optional) (`string`)
+
+For individual items (this list might be expanded):
+
+|Field|Type|Example|
+|---|---|---|
+|Title|`string`| `"Gedenkschrift van de Koninklijke Academie en van de Polytechnische School"` |
+|Author(s)|`string[]`| `["H.H.R. Roelofs Heyrmans", "Technische Hogeschool"]` |
+|Date in a [parsable format](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format)|`string \| number`| `"1906-01-01T00:00:00.000Z"` \| `-2019686400000` |
+|URL for item|`string`| `"https://heritage.tudelft.nl/objects/txf-18197"` |
+|Description|`string` | `"Samengesteld ter gelegenheid van de oprichting der Technische Hoogeschool"` |
+|Object type(s)|`string[]`| `["Boek"]` | 
+|[IIIF Image API](https://iiif.io/api/image/3.0/) endpoint (optional)|`string`| `"https://dlc.services/iiif-img/v3/7/6/69a9bc61-f3db-4f73-9d01-32c5e128fdbe"` |
 
 Currently all implemented APIs return different responses which are parsed using custom functions in `providers.ts`. The response format may therefore differ from what is indicated above.
 
