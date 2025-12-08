@@ -22,6 +22,188 @@ function termFilter(term) {
 function escapeRegExp(text) {
   return text.replace(/[\\^$.*+?()[\]{}|]/g, "\\$&");
 }
+// data/worldcat-types.json
+var worldcat_types_default = {
+  Archv: {
+    label: "Archival Material",
+    children: {
+      Digital: {
+        label: "Downloadable Archival Material"
+      }
+    }
+  },
+  ArtChap: {
+    label: "Article",
+    children: {
+      Chmpt: {
+        label: "Chapter"
+      },
+      Digital: {
+        label: "Downloadable article"
+      }
+    }
+  },
+  Audiobook: {
+    label: "Audiobook",
+    children: {
+      CD: {
+        label: "CD"
+      },
+      Digital: {
+        label: "eAudiobook"
+      },
+      LP: {
+        label: "LP"
+      },
+      Cassette: {
+        label: "Cassette"
+      }
+    }
+  },
+  Book: {
+    label: "Book",
+    children: {
+      Braille: {
+        label: "Braille"
+      },
+      Continuing: {
+        label: "Continually Updated Resource"
+      },
+      Digital: {
+        label: "eBook"
+      },
+      LargePrint: {
+        label: "Large Print"
+      },
+      mic: {
+        label: "Microform"
+      },
+      thsis: {
+        label: "Thesis/Dissertation"
+      }
+    }
+  },
+  CompFile: {
+    label: "Computer File"
+  },
+  Encyc: {
+    label: "Encyclopedia"
+  },
+  Game: {
+    label: "Game",
+    children: {
+      Digital: {
+        label: "Video Game"
+      }
+    }
+  },
+  "2d": {
+    label: "Image"
+  },
+  IntMM: {
+    label: "Interactive Multimedia"
+  },
+  Web: {
+    label: "Internet Resource",
+    children: {
+      Digital: {
+        label: "Website"
+      },
+      dwn2d: {
+        label: "Downloadable Image"
+      }
+    }
+  },
+  Jrnl: {
+    label: "Journal/Magazine",
+    children: {
+      Digital: {
+        label: "eJournal/eMagazine"
+      }
+    }
+  },
+  Kit: {
+    label: "Kit"
+  },
+  Map: {
+    label: "Map",
+    children: {
+      Digital: {
+        label: "eMap"
+      }
+    }
+  },
+  Music: {
+    label: "Music",
+    children: {
+      CD: {
+        label: "CD"
+      },
+      Digital: {
+        label: "eMusic"
+      },
+      LP: {
+        label: "LP"
+      },
+      Cassette: {
+        label: "Cassette"
+      }
+    }
+  },
+  MsScr: {
+    label: "Musical Score",
+    children: {
+      Digital: {
+        label: "Downloadable Music Score"
+      }
+    }
+  },
+  News: {
+    label: "Newspaper",
+    children: {
+      Digital: {
+        label: "eNewspaper"
+      }
+    }
+  },
+  Object: {
+    label: "Object"
+  },
+  Snd: {
+    label: "Sound Recording (Other)"
+  },
+  Toy: {
+    label: "Toy"
+  },
+  Video: {
+    label: "Video",
+    children: {
+      Bluray: {
+        label: "Bluray"
+      },
+      Digital: {
+        label: "eVideo"
+      },
+      DVD: {
+        label: "DVD"
+      },
+      Film: {
+        label: "Film"
+      },
+      VHS: {
+        label: "VHS"
+      }
+    }
+  },
+  Vis: {
+    label: "Visual material",
+    children: {
+      Digital: {
+        label: "Downloadable Visual Material"
+      }
+    }
+  }
+};
 
 // src/providers.ts
 var displayCount = 3;
@@ -54,12 +236,23 @@ var providers_default = [
         if (response) {
           const results = response.results;
           if (results.briefRecords) {
+            let parseType = function(generalFormat, specificFormat) {
+              if (!generalFormat)
+                return;
+              const type = worldcat_types_default[generalFormat];
+              const specificType = type[specificFormat];
+              if (specificType) {
+                return specificType?.label;
+              }
+              return type?.label;
+            };
             const normalizedResults = results.briefRecords.slice(0, displayCount).map((d) => ({
               id: d.oclcNumber.toString(),
               title: d.title,
               authors: d.creator,
               href: "https://tudelft.on.worldcat.org/oclc/" + d.oclcNumber,
-              date: d.date
+              date: d.date,
+              type: parseType(d.generalFormat, d.specificFormat)
             }));
             normalizedResults.count = results.numberOfRecords;
             return normalizedResults;
@@ -90,13 +283,15 @@ var providers_default = [
         if (response) {
           const results = response.results;
           const count = +results.total;
-          if (count && results.searchResults) {
+          const ifResults = results.searchResults && Array.isArray(results.searchResults);
+          if (count && ifResults) {
             const normalizedResults = results.searchResults.slice(0, displayCount).map((d) => ({
               id: d.thingid.replace("Thing_", "uuid:"),
               title: d.title,
               authors: d.contributors.map((c) => c.fullname).join(", "),
               href: "https://repository.tudelft.nl/record/uuid:" + d.thingid.replace("Thing_", ""),
-              date: d.publication_year
+              date: d.publication_year,
+              type: d.object_type
             }));
             normalizedResults.count = count;
             return normalizedResults;
@@ -130,7 +325,8 @@ var providers_default = [
           const normalizedResults = results.slice(0, displayCount).map((d) => ({
             title: d.title,
             description: d.description.split(" ").slice(0, 25).join(" ") + "...",
-            href: d.url
+            href: d.url,
+            type: d.type
           }));
           normalizedResults.count = results.length;
           return normalizedResults;
@@ -166,7 +362,8 @@ var providers_default = [
               title: d.title,
               authors: d.authors.map((author) => author.full_name).join(", "),
               href: "https://doi.org/" + d.doi,
-              date: new Date(d.published_date).getFullYear()
+              date: new Date(d.published_date).getFullYear().toString(),
+              type: d.defined_type_name
             }));
             const countFromHeaders = response.headers.get("Number-Of-Records");
             normalizedResults.count = countFromHeaders ? +countFromHeaders : undefined;
@@ -206,7 +403,8 @@ var providers_default = [
               q: query,
               facet_by: "topic_contributor,topic_date,topic_format,topic_material,type",
               max_facet_values: 10,
-              page: 1
+              page: 1,
+              sort_by: !query ? "_rand():asc" : ""
             }
           ]
         });
@@ -218,7 +416,8 @@ var providers_default = [
               title: d.label,
               authors: d.topic_contributor ? d.topic_contributor.join(", ") : null,
               href: "https://heritage.tudelft.nl/" + d.slug,
-              date: d.topic_date ? d.topic_date[0] : undefined
+              date: d.topic_date ? d.topic_date[0] : undefined,
+              type: d.type
             }));
             normalizedResults.count = results.results[0].found;
             return normalizedResults;
@@ -256,6 +455,14 @@ function fetchJson(url, body) {
   });
 }
 function createTypoRow(props) {
+  const typeStyle = `
+    background-color: #00a6d6;
+    color: white;
+    border-radius: 50px;
+    margin-bottom: 1em;
+    padding: 0 1em;
+    width: max-content
+  `;
   return html`
     <a
       href="${props.href}"
@@ -264,6 +471,7 @@ function createTypoRow(props) {
       class="news-summary"
     >
       <section>
+        ${props.type ? `<p class="label" style="${typeStyle}">` + props.type + "</p>" : ""}
         <h3>${props.title}</h3>
         <div class="row">
           <div class="sm-3"></div>
@@ -387,7 +595,13 @@ async function createResults(searchInput, languageInput) {
 
 // src/index.ts
 window.onload = () => {
-  const { value } = document.querySelector(".searchForm-input");
+  let value = "";
+  const searchElement = document.querySelector(".searchForm-input");
+  value = searchElement.value;
+  if (!value) {
+    const params = new URLSearchParams(window.location.search);
+    value = params.get("q") || "";
+  }
   const language2 = document.documentElement.lang || "en";
   document.documentElement.style.setProperty("scroll-behavior", "smooth");
   createResults(value, language2);

@@ -1,5 +1,9 @@
 import searchProviders from "./providers";
-import type { NormalizedResults, Translations } from "./types/types";
+import type {
+  NormalizedResults,
+  SearchResult,
+  Translations,
+} from "./types/types";
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/raw#building_an_identity_tag
 export const html = (strings: TemplateStringsArray, ...values: any[]) =>
@@ -31,7 +35,16 @@ export function fetchJson(url: string, body?: any) {
 // Use preact? https://preactjs.com/
 // Or: https://htmx.org/
 // Or: https://lit.dev/
-function createTypoRow(props: any) {
+function createTypoRow(props: SearchResult) {
+  const typeStyle = `
+    background-color: #00a6d6;
+    color: white;
+    border-radius: 50px;
+    margin-bottom: 1em;
+    padding: 0 1em;
+    width: max-content
+  `;
+
   return html`
     <a
       href="${props.href}"
@@ -40,6 +53,9 @@ function createTypoRow(props: any) {
       class="news-summary"
     >
       <section>
+        ${props.type
+          ? `<p class="label" style="${typeStyle}">` + props.type + "</p>"
+          : ""}
         <h3>${props.title}</h3>
         <div class="row">
           <div class="sm-3"></div>

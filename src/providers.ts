@@ -7,6 +7,7 @@ import type {
   WorldCatSearchResult,
   DatabaseNormalized,
 } from "./types/types";
+import worldCatObjectTypes from "../data/worldcat-types.json" assert { type: "json" };
 
 const displayCount = 3;
 
@@ -44,6 +45,18 @@ export default [
         if (response) {
           const results = response.results as WorldCatSearchResult;
           if (results.briefRecords) {
+            function parseType(
+              generalFormat: string | undefined,
+              specificFormat: string | undefined
+            ) {
+              if (!generalFormat) return undefined;
+              const type = worldCatObjectTypes[generalFormat];
+              const specificType = type[specificFormat];
+              if (specificType) {
+                return specificType?.label as string;
+              }
+              return type?.label as string;
+            }
             const normalizedResults: NormalizedResults = results.briefRecords
               .slice(0, displayCount)
               .map((d) => ({
@@ -52,6 +65,7 @@ export default [
                 authors: d.creator,
                 href: "https://tudelft.on.worldcat.org/oclc/" + d.oclcNumber,
                 date: d.date,
+                type: parseType(d.generalFormat, d.specificFormat),
               }));
             normalizedResults.count = results.numberOfRecords;
             return normalizedResults;
@@ -83,7 +97,10 @@ export default [
         if (response) {
           const results = response.results as RepositorySearchResult;
           const count = +results.total;
-          if (count && results.searchResults) {
+          // Results array turns into an object when there're no results
+          const ifResults =
+            results.searchResults && Array.isArray(results.searchResults);
+          if (count && ifResults) {
             const normalizedResults: NormalizedResults = results.searchResults
               .slice(0, displayCount)
               .map((d) => ({
@@ -94,6 +111,7 @@ export default [
                   "https://repository.tudelft.nl/record/uuid:" +
                   d.thingid.replace("Thing_", ""),
                 date: d.publication_year,
+                type: d.object_type,
               }));
             normalizedResults.count = count;
             return normalizedResults;
@@ -133,6 +151,7 @@ export default [
               description:
                 d.description.split(" ").slice(0, 25).join(" ") + "...",
               href: d.url,
+              type: d.type,
             }));
           normalizedResults.count = results.length;
           return normalizedResults;
@@ -169,7 +188,8 @@ export default [
                 title: d.title,
                 authors: d.authors.map((author) => author.full_name).join(", "),
                 href: "https://doi.org/" + d.doi,
-                date: new Date(d.published_date).getFullYear(),
+                date: new Date(d.published_date).getFullYear().toString(),
+                type: d.defined_type_name,
               }));
             // Getting count from response headers
             const countFromHeaders = response.headers.get("Number-Of-Records");
@@ -217,6 +237,7 @@ export default [
                 "topic_contributor,topic_date,topic_format,topic_material,type",
               max_facet_values: 10,
               page: 1,
+              sort_by: !query ? "_rand():asc" : "",
             },
           ],
         });
@@ -233,6 +254,7 @@ export default [
                   : null,
                 href: "https://heritage.tudelft.nl/" + d.slug,
                 date: d.topic_date ? d.topic_date[0] : undefined,
+                type: d.type,
               }));
             normalizedResults.count = results.results[0].found;
             return normalizedResults;
