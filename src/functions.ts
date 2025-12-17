@@ -169,6 +169,49 @@ export async function createResults(
             nl: "Richtlijnen, hulpmiddelen, evenementen en nieuwsberichten",
           });
           websiteHeading.after(subtitle);
+          // Add types to results
+          websiteResults.querySelectorAll("a").forEach((element) => {
+            let type: Translations;
+            const url = element.getAttribute("href");
+            if (
+              url?.startsWith("/library/") ||
+              url?.startsWith("/en/library/")
+            ) {
+              type = {
+                en: "Page",
+                nl: "Pagina",
+              };
+            } else if (
+              url?.startsWith("/evenementen/") ||
+              url?.startsWith("/en/events/")
+            ) {
+              type = {
+                en: "Event",
+                nl: "Evenement",
+              };
+            } else {
+              type = {
+                en: "News",
+                nl: "Nieuwsbericht",
+              };
+            }
+            // Remove existing label
+            const existingLabel = element.querySelector(".label");
+            existingLabel?.remove();
+            const tag = document.createElement("p");
+            tag.setAttribute("class", "label");
+            tag.setAttribute(
+              "style",
+              `background-color: #00a6d6;
+                color: white;
+                border-radius: 50px;
+                margin-bottom: 1em;
+                padding: 0 1em;
+                width: max-content`
+            );
+            tag.innerText = t(type);
+            element?.prepend(tag);
+          });
         }
         const websiteButton = websiteResults.querySelector(".btn");
         if (websiteButton) {
