@@ -82,6 +82,7 @@ export type NormalizedResults = {
   description?: string;
   href?: string;
   date?: string;
+  image?: string;
 }[] & {
   count?: undefined | number;
   error?: boolean;

@@ -42,7 +42,16 @@ function createTypoRow(props: any) {
       <section>
         <h3>${props.title}</h3>
         <div class="row">
-          <div class="sm-3"></div>
+          <div class="sm-3">
+            ${props.image
+              ? `
+            <picture>
+              <source media="(max-width: 600px)" srcset="${props.image}">
+              <img alt="${props.title}" src="${props.image}">
+            </picture>
+            `
+              : ""}
+          </div>
           <div class="sm-9">
             ${props.authors ? "<p>" + props.authors + "</p>" : ""}
             ${props.description ? "<p>" + props.description + "</p>" : ""}

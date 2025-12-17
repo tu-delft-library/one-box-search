@@ -233,6 +233,9 @@ export default [
                   : null,
                 href: "https://heritage.tudelft.nl/" + d.slug,
                 date: d.topic_date ? d.topic_date[0] : undefined,
+                image: d.thumbnail
+                  ? d.thumbnail.replace("1024,", "!200,200")
+                  : null,
               }));
             normalizedResults.count = results.results[0].found;
             return normalizedResults;
