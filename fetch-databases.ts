@@ -50,5 +50,9 @@ const normalizedDatabases = databases.map((d, index) => {
 // const urls = normalizedDatabases.map((d) => d.url);
 // Bun.write("data/urls.txt", urls.join("\n"));
 
+// Extract all types
+// const urls = new Set(normalizedDatabases.map((d) => d.type));
+// Bun.write("data/types.txt", [...urls].join("\n"));
+
 // Write output
 Bun.write("data/databases.json", JSON.stringify(normalizedDatabases, null, 4));
