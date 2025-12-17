@@ -243,17 +243,6 @@
         "type": "reference"
     },
     {
-        "title": "BIOSIS Citation Index",
-        "access": "",
-        "url": "https://www.webofscience.com/wos/bci/basic-search",
-        "keywords": "Biology; Biomedical engineering; Microbiology; Biotechnology",
-        "description": "BIOSIS Citation Index is the world's most comprehensive reference database for life science research. It includes cited references to primary journal literature on vital biological research, medical research findings, and discoveries of new organisms. It also covers original research reports and reviews in traditional biological and biomedical areas. Database Coverage: 1926 to present. Coverage includes traditional areas of biology such as: Botany, Zoology, Microbiology and related fields such as: biomedical, agriculture, pharmacology, ecology. Additionally, interdisciplinary fields such as: medicine, biochemistry, biophysics, boengineering, and biotechnology.",
-        "disciplines": [
-            "Life Science and Technology"
-        ],
-        "type": "articles"
-    },
-    {
         "title": "BONAS Archiwijzer",
         "access": "",
         "url": "https://bonas.nl/archiwijzer/",
@@ -263,17 +252,6 @@
             "Architecture"
         ],
         "type": "reference"
-    },
-    {
-        "title": "Book Citation Index",
-        "access": "",
-        "url": "https://www.webofscience.com/wos/woscc/basic-search",
-        "keywords": "Scientific research",
-        "description": "The Book Citation Index (BKCI), part of the Web of Science (WoS) Core Collection, includes the published scholarly literature of books and book chapters selected by the WoS editorial staff. Book citations are seamlessly integrated with other citation databases in Web of Knowledge to provide a complete citation count of an author's published work. These citations are included in the overall citation count of a published work. Use these databases to track who is citing your published works and the published works of your peers. BCI constists of Book Citation Index - Science (BKCI-S) and Book Citation Index - Social Science & Humanities (KKCI-SSH). Please note that textbooks, encyclopedias, and reference books are not included in the Book Citation Index.",
-        "disciplines": [
-            "All"
-        ],
-        "type": "articles"
     },
     {
         "title": "Bouwkosten.nl",
@@ -474,40 +452,6 @@
         "type": "reports"
     },
     {
-        "title": "Current Chemical Reactions",
-        "access": "",
-        "url": "https://www.webofscience.com/wos/woscc/basic-search",
-        "keywords": "Chemistry",
-        "description": "Current Chemical Reactions, part of Web of Science Core Collection: Chemical Indexes, contains single- and multi-step new synthetic methods taken from leading journals and patents from 36 issuing authorities. The overall reaction flow is provided for each method, along with a detailed and accurate graphical representation of each reaction step. Coverage: 1985 to present. It also includes an additional 140,000 structure data records from the prestigious Institut National de la Propriété Industrielle (INPI) dating back to the 1840. INPI is the national intellectual property office of France. It is in charge of patents, trademarks, and industrial design rights.",
-        "disciplines": [
-            "Life Science and Technology",
-            "Molecular Science and Technology"
-        ],
-        "type": "articles"
-    },
-    {
-        "title": "Current Contents Connect",
-        "access": "",
-        "url": "https://www.webofscience.com/wos/ccc/basic-search",
-        "keywords": "Scientific research",
-        "description": "Current Contents Connect is a multidisciplinary current awareness Web resource providing access to complete bibliographic information of the world's leading scholarly journals. Current Contents Connect allows you to search a premium collection of evaluated scholarly Web sites and access evaluated, full-text Web documents in three general resource types: preprints, funding information, and research activities. Available editions and collections: Agriculture, Biology & Environmental Sciences (ABES); Social & Behavioral Sciences (SBS); Clinical Medicine (CM); Life Sciences (LS); Physical, Chemical & Earth Sciences (PCES); Engineering, Computing & Technology (ECT); Arts & Humanities (AH); Business Collection (BC); Electronics & Telecommunications Collection (EC) . Database Coverage: 1998 to the present.",
-        "disciplines": [
-            "All"
-        ],
-        "type": "articles"
-    },
-    {
-        "title": "Data Citation Index",
-        "access": "",
-        "url": "https://www.webofscience.com/wos/drci/basic-search",
-        "keywords": "Scientific research",
-        "description": "The Data Citation Index contains source records relating to research data available in Web-based data repositories and covers all scholarly disciplines. Records are presented in a bibliographic style (similar to all product databases in the Web of Knowledge platform). Bibliographic source records comprise of three data types that include: Repositories, Data Studies, and Data Sets. These record types are linked in relationships to allow navigation from broadest level records to narrower level records. Records in the Data Citation Index contain traditional elements such as: Author, Source, Abstract, Address, and Subject Indexing.",
-        "disciplines": [
-            "All"
-        ],
-        "type": "research data"
-    },
-    {
         "title": "DBLP",
         "access": "",
         "url": "https://dblp.uni-trier.de",
@@ -528,17 +472,6 @@
             "All"
         ],
         "type": "articles"
-    },
-    {
-        "title": "Derwent Innovations Index",
-        "access": "",
-        "url": "https://www.webofscience.com/wos/diidw/basic-search",
-        "keywords": "Design; Scientific research",
-        "description": "Derwent Innovations Index facilitates rapid, precise patent searching, letting you conduct patent and citation searches of inventions in chemical, electrical, electronic, and mechanical engineering. This resource merges the value-added patent information from Derwent World Patents Index with the patent citation information from Derwent Patent Citation Index. You can use additional descriptive information and coding to quickly grasp a patent's significance and its relationship to other patents. Coverage: over 80 million patents, patent information indexed from over 50 patent issuing authorities in the Derwent World Patent Index (1963-present) with patent citations indexed from the Derwent Patents Citation Index (1973-present).",
-        "disciplines": [
-            "All"
-        ],
-        "type": "patent information"
     },
     {
         "title": "Diamond Discovery Hub",
@@ -760,17 +693,6 @@
         "type": "articles"
     },
     {
-        "title": "Grants Index",
-        "access": "",
-        "url": "https://www.webofscience.com/wos/grants/basic-search",
-        "keywords": "Scientific research",
-        "description": "Grants Index (coverage 1953-) offers a comprehensive search tool for exploring 5M+ awarded grants from diverse government and private funding agencies worldwide and links to associated Web of Science Core Collection documents. Search by topic, prinicpal investigator, agency, or grant type to gain comprehensive insights into existing research landscapes. Refine and analyze results to identify funding trends, delve into published research outcomes linked to awarded grants, and streamline your research process by exploring grants alongside a wide array of scholarly outputs.",
-        "disciplines": [
-            "All"
-        ],
-        "type": "reference"
-    },
-    {
         "title": "GreenFILE",
         "access": "",
         "url": "https://search.ebscohost.com/login.aspx?authtype=sso&custid=s1131660&groupid=main&profile=ehost&defaultdb=8gh",
@@ -888,19 +810,6 @@
         "type": "articles"
     },
     {
-        "title": "Index Chemicus",
-        "access": "",
-        "url": "https://www.webofscience.com/wos/woscc/basic-search",
-        "keywords": "Chemistry",
-        "description": "Index Chemicus, part of Web of Science Core Collection: Chemical Indexes, contains the structures and critical supporting data for novel organic compounds reported in leading international journals. It is a vital source of new information on biologically active compounds and natural products.Database Coverage: 1993 to present.",
-        "disciplines": [
-            "Life Science and Technology",
-            "Molecular Science and Technology",
-            "Material Sciences"
-        ],
-        "type": "reference"
-    },
-    {
         "title": "INIS International Nuclear Information System",
         "access": "",
         "url": "https://www.iaea.org/resources/databases/inis",
@@ -926,7 +835,7 @@
     },
     {
         "title": "InView Essential",
-        "access": "TU Delft has access to InView Essential only. Log in with your TU Delft credentials through \"Student/Medewerker\". After 14 November 2025, accounts that have not been anonymised will be deleted by Wolters Kluwer, resulting in the loss of all personal settings. If users later sign in via SURFconext, a new anonymous account will be created, and previous preferences will not be restored.",
+        "access": "TU Delft has access to InView Essential only. Log in with your TU Delft credentials through \"Student/Medewerker\". Since 14 November 2025, accounts that have not been anonymised will be deleted by Wolters Kluwer, resulting in the loss of all personal settings. If users later sign in via SURFconext, a new anonymous account will be created, and previous preferences will not be restored.",
         "url": "https://www.inview.nl/",
         "keywords": "Law; Legislation",
         "description": "InView is a research platform for legal, tax, financial, and government professionals. It consists of InView Essential (formerly known as Navigator) and InView Legal. InView Essential provides access to Dutch and international legal and fiscal information, including legislation, regulations, literature, commentaries, and case law. It also includes the Juridisch-Economisch Lexicon EN-NL and NL-EN. TU Delft has access to InView Essential only. Log in with your TU Delft credentials through \"Student/Medewerker\".",
@@ -953,17 +862,6 @@
         "url": "https://www.tudelft.nl/en/library/publish/open-access/find-a-journal-to-publish-open",
         "keywords": "Scientific research; Writing and reporting",
         "description": "At both the national and institutional levels, agreements are established with publishers that enable corresponding authors to publish open access on their platforms either without costs or at a significantly reduced rate. These agreements involve publishers such as Springer, Wiley, Taylor & Francis, Elsevier, Cambridge University Press, and the American Chemical Society. The Journal Browser provides information on journals gathered from multiple sources, including the Directory of Open Access Journals (DOAJ) and the Dutch academic publisher agreements. This tool can be used to identify which journal discounts are available for corresponding authors from TU Delft, as well as to find trustworthy journals and those that do not charge any Article Processing Charges (APCs). For each journal, the platform displays information on APC discounts, open access agreements that allow publishing at no extra or reduced cost, and journal metrics such as SJR, SNIP, and CiteScore, along with the journal's rank within its category and recent article titles. Users can search for journals by title or keyword and have the option to sort results by title or based on journal metrics.",
-        "disciplines": [
-            "All"
-        ],
-        "type": "reference"
-    },
-    {
-        "title": "Journal Citation Reports",
-        "access": "",
-        "url": "https://jcr.clarivate.com",
-        "keywords": "Scientific research",
-        "description": "InCites Journal Citation Reports (JCR) provides a systematic, objective means to evaluate the world’s leading research journals. It offers a unique perspective for journal evaluation and comparison by accumulating and tabulating citation and article counts from virtually all specialties in the sciences, social sciences, and technology fields. To help you compare journals and discover which are the most significant to you, Journal Citation Reports can show: Most frequently cited journals in a field; Hottest journals in a field; Highest impact journals in a field ; Most published articles in a field; Subject category data for benchmarking. JCR Comes with Two Editions: JCR Science Edition and JCR Social Sciences Edition. Journal Citation Reports (JCR) is, together with Essential Science Indicators (ESI) part of the Journal and Highly Cited Data (JHCD). Full integration with Web of Science lets you link to JCR Web, from JCR journal records to ulrichsweb.com and recent Current Contents Connect tables of contents.",
         "disciplines": [
             "All"
         ],
@@ -1093,18 +991,6 @@
             "Electrical Engineering"
         ],
         "type": "reference"
-    },
-    {
-        "title": "Medline",
-        "access": "",
-        "url": "https://www.webofscience.com/wos/medline/basic-search",
-        "keywords": "Biomedical engineering; Biology; Environmental sciences",
-        "description": "MEDLINE is the premier database of the U.S. National Library of Medicine (NLM). It contains over 12 million records of journal articles in all areas of the life sciences, with particular emphasis on biomedicine. MEDLINE records are created by NLM and collaborating partners. Source publications for MEDLINE cover basic biomedical research and the clinical sciences. Major subject areas include nursing, dentistry, veterinary medicine, pharmacy, allied health, and pre-clinical sciences. MEDLINE also covers life sciences that are vital to biomedical practitioners, researchers, and educators, including some aspects of biology, environmental science, marine biology, plant and animal science as well as biophysics and chemistry. Increased coverage of life sciences began in 2000. By the end of 2001, most citations previously included in separate NLM specialty databases had also been added to MEDLINE. Database Coverage: 1950 to present.",
-        "disciplines": [
-            "Life Science and Technology",
-            "Clinical Technology"
-        ],
-        "type": "articles"
     },
     {
         "title": "Mendeley",
@@ -1252,7 +1138,7 @@
         "disciplines": [
             "All"
         ],
-        "type": "reference"
+        "type": "educational resource"
     },
     {
         "title": "Open Educational Resources",
@@ -1263,7 +1149,7 @@
         "disciplines": [
             "All"
         ],
-        "type": "educational resource"
+        "type": "reference"
     },
     {
         "title": "OpenAIRE",
@@ -1377,17 +1263,6 @@
         "type": "articles"
     },
     {
-        "title": "Preprint Citation Index",
-        "access": "",
-        "url": "https://www.webofscience.com/wos/pprn/basic-search",
-        "keywords": "Scientific research",
-        "description": "The Preprint Citation Index (PCI) is a collection of preprints from leading repositories such as arXiv, bioRxiv, chemRxiv, medRxiv, and Preprints.org. A preprint is a version of a research paper or outcome that is publicly available in a repository before it has been peer-reviewed. Researchers focused on today’s urgent global challenges can access preprints to speed up scientific progress. With PCI, users can find and reference peer-reviewed articles with links from preprints to Web of Science Core Collection records, connect preprints to journal articles, and monitor new research across several repositories. However, preprints are not included in the Web of Science Core Collection. To ensure this is clear within the Web of Science platform, when running an ‘All Databases’ search, the default setting is filtered to exclude preprints. This means that users will need to ‘opt in’ to include them in their search. Additionally, preprint citations are not included in Times Cited counts, the Journal Impact Factor (JIF), or any other citation metrics within the Web of Science Core Collection or Journal Citation Reports.",
-        "disciplines": [
-            "All"
-        ],
-        "type": "articles"
-    },
-    {
         "title": "Project Euclid",
         "access": "",
         "url": "https://projecteuclid.org/",
@@ -1397,17 +1272,6 @@
             "Technical Mathemathics"
         ],
         "type": "articles"
-    },
-    {
-        "title": "ProQuest Dissertation & Theses Citation Index",
-        "access": "TU Delft has no subscription to access the full text on ProQuest Dissertations and Theses Global",
-        "url": "https://www.webofscience.com/wos/pqdt/basic-search",
-        "keywords": "Scientific research",
-        "description": "ProQuest Dissertations &Theses Citation Index with the Web of Science enables discovering early career, post-graduate research in the form of 5M+ dissertations and theses from 4K+ institutions, alongside journal articles, conference proceedings, research data, books, preprints, and patents. Please note that TU Delft has no subscription to access the full text on ProQuest Dissertations and Theses Global, but dissertations can often be retrieved for free from the web.",
-        "disciplines": [
-            "All"
-        ],
-        "type": "theses"
     },
     {
         "title": "ProQuest One Business (formerly ABI/INFORM)",
@@ -1499,7 +1363,7 @@
     {
         "title": "ROSA P",
         "access": "",
-        "url": "https://rosap.ntl.bts.gov/advancesearch",
+        "url": "https://rosap.ntl.bts.gov/gsearch",
         "keywords": "Traffic and transport; Transport technology; Infrastructure",
         "description": "ROSA P is the US Department of Transport's (USDOT) National Transportation Library's (NTL) Repository and Open Science Access Portal. The name ROSA P was chosen to honor the role public transportation played in the civil rights movement, along with one of the important figures, Rosa Parks. Founded as an all-digital library program, NTL’s collections in ROSA P are full-text digital publications, datasets, and other resources. Legacy print materials that have been digitized are collected if they have historic, technical, or national significance. The repository is also designated as the full-text repository for USDOT-funded research under the USDOT Public Access Plan. Collections in ROSA P are available without restriction to transportation researchers, statistical organizations, the media, and the general public.",
         "disciplines": [
@@ -1547,17 +1411,6 @@
         "type": "research data"
     },
     {
-        "title": "SciELO Citation Index",
-        "access": "",
-        "url": "https://www.webofscience.com/wos/scielo/basic-search",
-        "keywords": "Scientific research",
-        "description": "SciELO (Scientific Electronic Library Online) is a program of the Sao Paulo Research Foundation for the cooperative publishing of open access journals on the internet.Make connections to the broader research landscape with the addition of the SciELO Citation Index. Get a more complete global picture by discovering new insights from research in Latin America, Spain, Portugal, the Caribbean and South Africa. Search and view critically important regional content with international impact to get a comprehensive picture of the influencers and drivers of regional research: approximately 650 titles (over 350 adding content to journals already covered in the Web of Science); over 4 million cited references; open access with links to full text through the SciELO site; weekly updates from the SciELO Brazil data feed; simplified discovery process for local information in a regional database; an easy search experience with local language interface. Coverage: Agricultural sciences; Applied social science; Biological sciences; Engineering; Exact and earth sciences, Health sciences, Linguistics, letters and arts; Mathematics; Physics; Social sciences.",
-        "disciplines": [
-            "All"
-        ],
-        "type": "articles"
-    },
-    {
         "title": "SciFinder-n",
         "access": "A one-time registration with NetID is required. Go to: https://www.lib.tudelft.nl/scifinderregistration/",
         "url": "https://scifinder-n.cas.org/",
@@ -1588,7 +1441,7 @@
         "disciplines": [
             "All"
         ],
-        "type": "articles"
+        "type": "patent information"
     },
     {
         "title": "SciFinder-n (one-time registration)",
@@ -1599,7 +1452,7 @@
         "disciplines": [
             "All"
         ],
-        "type": "patent information"
+        "type": "articles"
     },
     {
         "title": "SCImago Journal & Country Rank",
@@ -1756,11 +1609,11 @@
         "type": "articles"
     },
     {
-        "title": "Toxic",
+        "title": "Toxic: Chemiekaarten",
         "access": "",
         "url": "https://app.toxic.nl/en/frontend/published/nrzrmkhdknmpijwadizmzbigoxcspp/workplaceproduct/",
         "keywords": "Chemical process engineering; Chemistry; Safety engineering; Toxicology",
-        "description": "Toxic provides access to (safety) data of chemical substances. This large collection of Safety Data Sheets incorpates the collection formerly known as \"Chemiekaarten\". You can search on product name, product code, CAS-number, or UN-number. You can also filter on collection \"Chemiekaarten\". For each substance there is a separate page where you may quickly find the information you need: identification, physical characteristics, symptoms, emergencies and disposal, prevention, first aid, and transport regulations.",
+        "description": "Toxic: Chemiekaarten provides access to (safety) data of chemical substances. This large collection of Safety Data Sheets incorpates the collection formerly known as \"Chemiekaarten\". You can search on product name, product code, CAS-number, or UN-number. You can also filter on collection \"Chemiekaarten\". For each substance there is a separate page where you may quickly find the information you need: identification, physical characteristics, symptoms, emergencies and disposal, prevention, first aid, and transport regulations.",
         "disciplines": [
             "Molecular Science and Technology"
         ],
@@ -1920,28 +1773,6 @@
             "Technology, Policy and Management"
         ],
         "type": "research data"
-    },
-    {
-        "title": "Web of Science (Core Collection)",
-        "access": "Important! Use \"More Settings\" to select specific databases in the Web of Science Core Collection. The list of selected databases may differ depending on which Web of Science databases you have used before.",
-        "url": "https://www.webofscience.com/wos/woscc/basic-search",
-        "keywords": "Scientific research",
-        "description": "The Web of Science Core Collection is a comprehensive database that provides full-text access to titles from around the world in the life, earth, agricultural, and environmental sciences, as well as scholarly literature in the sciences, social sciences, arts, and humanities. It also allows you to examine proceedings of international conferences, symposia, seminars, colloquia, workshops, and conventions. The Core Collection - Citation Indexes - consists of Science Citation Index Expanded (SCI-EXPANDED), Social Sciences Citation Index (SSCI), Arts & Humanities Citation Index (A&HCI), Conference Proceedings Citation Index - Science (CPCI-S), Conference Proceedings Citation Index - Social Science & Humanities (CPCI-SSH), Book Citation Index Science (BKCI-S), Book Citation Index Social Sciences & Humanities (BKCI-SSH), and Emerging Sources Citation Index (ESCI). The Core Collection - Chemical Indexes - consists of Current Chemical Reactions (CCR-EXPANDED) and Index Chemicus (IC). Backfiles are available to 1900.",
-        "disciplines": [
-            "All"
-        ],
-        "type": "articles"
-    },
-    {
-        "title": "Web of Science All Databases",
-        "access": "Click on tab 'Select a Database' to search a specific database,",
-        "url": "https://www.webofscience.com/wos/alldb/basic-search",
-        "keywords": "Scientific research",
-        "description": "Web of Science gives you access objective content and powerful tools to search, track, measure and collaborate in the sciences, social sciences, arts, and humanities. This multidisciplinary research platform lets users search numerous databases simultaneously via one interface. Web of Science contains the following databases: Web of Science Core Collection, Current Contents Connect, Derwent Innovation Index, and MEDLINE. Web of Science Core Collection provides access the world’s leading scholarly literature in the sciences, social sciences, arts, and humanities and examine proceedings of international conferences, symposia, seminars, colloquia, workshops, and conventions. Current Contents Connect provides complete tables of contents and bibliographic information from the world’s leading scholarly journals and books; also includes relevant, evaluated Web sites and documents. Derwent Innovations Index provides value-added patent information from Derwent World Patent Index as well as patent citation information from Patents Citation Index. MEDLINE is the U.S. National Library of Medicine's (NLM) premier life sciences database. Explore biomedicine and life sciences, bioengineering, public health, clinical care, and plant and animal science. Search precisely with MeSH terms and CAS registry numbers; link to NCBI databases and PubMed Related Articles.",
-        "disciplines": [
-            "All"
-        ],
-        "type": "articles"
     },
     {
         "title": "Wikipedia",
