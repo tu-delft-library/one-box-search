@@ -630,10 +630,6 @@ window.onload = () => {
   let value = "";
   const searchElement = document.querySelector(".searchForm-input");
   value = searchElement.value;
-  if (!value) {
-    const params = new URLSearchParams(window.location.search);
-    value = params.get("q") || "";
-  }
   const language2 = document.documentElement.lang || "en";
   document.documentElement.style.setProperty("scroll-behavior", "smooth");
   createResults(value, language2);
