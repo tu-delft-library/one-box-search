@@ -1,0 +1,181 @@
+{
+  "Archv": {
+    "label": "Archival Material",
+    "children": {
+      "Digital": {
+        "label": "Downloadable Archival Material"
+      }
+    }
+  },
+  "ArtChap": {
+    "label": "Article",
+    "children": {
+      "Chmpt": {
+        "label": "Chapter"
+      },
+      "Digital": {
+        "label": "Downloadable article"
+      }
+    }
+  },
+  "Audiobook": {
+    "label": "Audiobook",
+    "children": {
+      "CD": {
+        "label": "CD"
+      },
+      "Digital": {
+        "label": "eAudiobook"
+      },
+      "LP": {
+        "label": "LP"
+      },
+      "Cassette": {
+        "label": "Cassette"
+      }
+    }
+  },
+  "Book": {
+    "label": "Book",
+    "children": {
+      "Braille": {
+        "label": "Braille"
+      },
+      "Continuing": {
+        "label": "Continually Updated Resource"
+      },
+      "Digital": {
+        "label": "eBook"
+      },
+      "LargePrint": {
+        "label": "Large Print"
+      },
+      "mic": {
+        "label": "Microform"
+      },
+      "thsis": {
+        "label": "Thesis/Dissertation"
+      }
+    }
+  },
+  "CompFile": {
+    "label": "Computer File"
+  },
+  "Encyc": {
+    "label": "Encyclopedia"
+  },
+  "Game": {
+    "label": "Game",
+    "children": {
+      "Digital": {
+        "label": "Video Game"
+      }
+    }
+  },
+  "2d": {
+    "label": "Image"
+  },
+  "IntMM": {
+    "label": "Interactive Multimedia"
+  },
+  "Web": {
+    "label": "Internet Resource",
+    "children": {
+      "Digital": {
+        "label": "Website"
+      },
+      "dwn2d": {
+        "label": "Downloadable Image"
+      }
+    }
+  },
+  "Jrnl": {
+    "label": "Journal/Magazine",
+    "children": {
+      "Digital": {
+        "label": "eJournal/eMagazine"
+      }
+    }
+  },
+  "Kit": {
+    "label": "Kit"
+  },
+  "Map": {
+    "label": "Map",
+    "children": {
+      "Digital": {
+        "label": "eMap"
+      }
+    }
+  },
+  "Music": {
+    "label": "Music",
+    "children": {
+      "CD": {
+        "label": "CD"
+      },
+      "Digital": {
+        "label": "eMusic"
+      },
+      "LP": {
+        "label": "LP"
+      },
+      "Cassette": {
+        "label": "Cassette"
+      }
+    }
+  },
+  "MsScr": {
+    "label": "Musical Score",
+    "children": {
+      "Digital": {
+        "label": "Downloadable Music Score"
+      }
+    }
+  },
+  "News": {
+    "label": "Newspaper",
+    "children": {
+      "Digital": {
+        "label": "eNewspaper"
+      }
+    }
+  },
+  "Object": {
+    "label": "Object"
+  },
+  "Snd": {
+    "label": "Sound Recording (Other)"
+  },
+  "Toy": {
+    "label": "Toy"
+  },
+  "Video": {
+    "label": "Video",
+    "children": {
+      "Bluray": {
+        "label": "Bluray"
+      },
+      "Digital": {
+        "label": "eVideo"
+      },
+      "DVD": {
+        "label": "DVD"
+      },
+      "Film": {
+        "label": "Film"
+      },
+      "VHS": {
+        "label": "VHS"
+      }
+    }
+  },
+  "Vis": {
+    "label": "Visual material",
+    "children": {
+      "Digital": {
+        "label": "Downloadable Visual Material"
+      }
+    }
+  }
+}

@@ -75,15 +75,18 @@ export type RepositorySearchResult = {
   ];
 };
 
-export type NormalizedResults = {
+export type SearchResult = {
   id?: string;
   title?: string;
   authors?: string;
   description?: string;
   href?: string;
   date?: string;
+  type?: string;
   image?: string;
-}[] & {
+};
+
+export type NormalizedResults = SearchResult[] & {
   count?: undefined | number;
   error?: boolean;
 };
