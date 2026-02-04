@@ -40,18 +40,18 @@ export default [
         // WorldCat doesn't accept an empty search string, using asterisk instead
         const encodedQuery = encodeURIComponent(query);
         const response = await fetchJson(
-          this.apiBaseUrl + (encodedQuery || "*")
+          this.apiBaseUrl + (encodedQuery || "*"),
         );
         if (response) {
           const results = response.results as WorldCatSearchResult;
           if (results.briefRecords) {
             function parseType(
               generalFormat: string | undefined,
-              specificFormat: string | undefined
+              specificFormat: string | undefined,
             ) {
               if (!generalFormat) return undefined;
               const type = worldCatObjectTypes[generalFormat];
-              const specificType = type[specificFormat];
+              const specificType = type.children[specificFormat];
               if (specificType) {
                 return specificType?.label as string;
               }
@@ -92,7 +92,7 @@ export default [
     getRecords: async function (query: string) {
       try {
         const response = await fetchJson(
-          this.apiBaseUrl + encodeURIComponent(query)
+          this.apiBaseUrl + encodeURIComponent(query),
         );
         if (response) {
           const results = response.results as RepositorySearchResult;

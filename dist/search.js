@@ -240,7 +240,7 @@ var providers_default = [
               if (!generalFormat)
                 return;
               const type = worldcat_types_default[generalFormat];
-              const specificType = type[specificFormat];
+              const specificType = type.children[specificFormat];
               if (specificType) {
                 return specificType?.label;
               }
