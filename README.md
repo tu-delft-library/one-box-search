@@ -29,7 +29,8 @@ This will output the file `search.js` in the `dist` folder. When running the `bu
 // @name        One-Box Search
 // @description Searching across TU Delft Library resources
 // @version     2025-02-18
-// @match       https://www.tudelft.nl/*library/zoeken-dev*
+// @match       https://www.tudelft.nl/library/zoeken-dev*
+// @match       https://www.tudelft.nl/en/library/search-dev*
 // @require     file:///path-to-repository/dist/search.js
 // ==/UserScript==
 ```
