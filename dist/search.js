@@ -417,7 +417,8 @@ var providers_default = [
               authors: d.topic_contributor ? d.topic_contributor.join(", ") : null,
               href: "https://heritage.tudelft.nl/" + d.slug,
               date: d.topic_date ? d.topic_date[0] : undefined,
-              type: d.type
+              type: d.type,
+              image: d.thumbnail ? d.thumbnail.replace("1024,", "!200,200") : null
             }));
             normalizedResults.count = results.results[0].found;
             return normalizedResults;
@@ -474,7 +475,14 @@ function createTypoRow(props) {
         ${props.type ? `<p class="label" style="${typeStyle}">` + props.type + "</p>" : ""}
         <h3>${props.title}</h3>
         <div class="row">
-          <div class="sm-3"></div>
+          <div class="sm-3">
+            ${props.image ? `
+            <picture>
+              <source media="(max-width: 600px)" srcset="${props.image}">
+              <img alt="${props.title}" src="${props.image}">
+            </picture>
+            ` : ""}
+          </div>
           <div class="sm-9">
             ${props.authors ? "<p>" + props.authors + "</p>" : ""}
             ${props.description ? "<p>" + props.description + "</p>" : ""}
