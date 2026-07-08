@@ -403,18 +403,6 @@
         "type": "reference"
     },
     {
-        "title": "CiteSeerX",
-        "access": "",
-        "url": "https://citeseer.ist.psu.edu/",
-        "keywords": "Computer systems and computer networks; Informatics general; Information science; Information systems, databases",
-        "description": "CiteSeerX is a scientific literature digital library and search engine that focuses primarily on the literature in computer and information science. It aims to improve the dissemination of scientific literature and to provide improvements in functionality, usability, availability, cost, comprehensiveness, efficiency, and timeliness in the access of scientific and scholarly knowledge. Rather than creating just another digital library, CiteSeerX attempts to provide resources such as algorithms, data, metadata, services, techniques, and software that can be used to promote other digital libraries. CiteSeerx has developed new methods and algorithms to index PostScript and PDF research articles on the Web.",
-        "disciplines": [
-            "Computer Science",
-            "Technology, Policy and Management"
-        ],
-        "type": "articles"
-    },
-    {
         "title": "Clarksons Shipping Intelligence Network",
         "access": "Students can gain access within the TU network by creating an account via the link below (based on their TU Delft e-mail address): https://www.clarksons.net/Portal/Account/Register#/",
         "url": "https://sin.clarksons.net/",
@@ -1198,7 +1186,7 @@
         "access": "",
         "url": "https://openalex.org/",
         "keywords": "Scientific research; Information systems, databases",
-        "description": "OpenAlex is a fully open bibliographic database providing access to the global research system, serving as an open alternative to proprietary services. It covers all scholarly disciplines, including non-English works, research from the Global South, and grey literature. Its web interface allows users to query metadata for works—for example, by title, abstract, authors, institutions, and sources—supporting Boolean searches and faceted filtering on attributes such as language, corresponding authors, funders, Sustainable Development Goals, and more. The interface displays useful statistics, citation counts, and links to available full texts, while the underlying data includes metrics such as Field-Weighted Citation Impact (FWCI). The complete dataset, offered under a CC0 license, is accessible via a powerful API and data snapshots. The API provides granular details, including comprehensive open access information such as specific license, version, and repository location.",
+        "description": "OpenAlex is a fully open bibliographic database providing access to the global research system, serving as an open alternative to proprietary services. It covers all scholarly disciplines, including non-English works, research from the Global South, and grey literature. Its web interface allows users to query metadata for works - for example, by title, abstract, authors, institutions, and sources - supporting Boolean searches and faceted filtering on attributes such as language, corresponding authors, funders, Sustainable Development Goals, and more. The interface displays useful statistics, citation counts, and links to available full texts, while the underlying data includes metrics such as Field-Weighted Citation Impact (FWCI). The complete dataset, offered under a CC0 license, is accessible via a powerful API and data snapshots. The API provides granular details, including comprehensive open access information such as specific license, version, and repository location.",
         "disciplines": [
             "All"
         ],
@@ -1262,10 +1250,10 @@
     },
     {
         "title": "PEER Ground Motion Database",
-        "access": "To access the PEER Ground Motion Database, users are required to register",
+        "access": "To access the PEER Ground Motion Database, users must register with a valid university or corporate email address, which requires annual re-registration.",
         "url": "https://ngawest2.berkeley.edu/",
         "keywords": "Geophysics; Geology; Earth sciences",
-        "description": "The Pacific Earthquake Engineering Research Center (PEER) Ground Motion Database is a web-based database that provides tools for searching, selecting, and downloading ground motion data. The database consist of two separate sections: NGA West2 Shallow Crustal Earthquakes in Active Tectonic Regimes and NGA East Central and Eastern North-America. The NGA West2 ground motion database includes a very large set of ground motions recorded in worldwide shallow crustal earthquakes in active tectonic regimes. The database has one of the most comprehensive sets of meta-data, including different distance measure, various site characterizations, earthquake source data, etc. The current version of the database is similar to the NGA West2 database, which was used to develop the 2014 NGA West2 ground motion models (GMMs). The objective of NGA East is to develop a new ground motion characterization (GMC) model for the Central and Eastern North-American (CENA) region. The GMC model consists in a set of new ground motion models (GMMs) for median and standard deviation of ground motions (GMs) and their associated weights in the logic-trees for use in probabilistic seismic hazard analyses (PSHA).",
+        "description": "The Pacific Earthquake Engineering Research Center (PEER) Ground Motion Database is a web-based platform for searching, selecting, and downloading ground motion data. The database consists of two separate sections: NGA-West2 (Shallow Crustal Earthquakes in Active Tectonic Regimes) and NGA-East (Central and Eastern North America). The NGA-West2 section includes a large set of ground motions recorded in worldwide shallow crustal earthquakes, featuring comprehensive metadata such as various distance measures, site characterisations, and earthquake source data. The current version aligns with the dataset used to develop the 2014 NGA-West2 ground motion models (GMMs). The objective of NGA-East is to develop a new ground motion characterisation (GMC) model for the Central and Eastern North America (CENA) region. This GMC model provides a set of new GMMs for the median and standard deviation of ground motions, alongside their associated weights in logic trees for use in probabilistic seismic hazard analyses (PSHA).",
         "disciplines": [
             "Applied Earth Sciences"
         ],
@@ -1446,7 +1434,7 @@
         "access": "",
         "url": "https://www.scimagojr.com/index.php",
         "keywords": "Scientific research",
-        "description": "The SCImago Journal & Country Rank is a portal that includes the journals and country scientific indicators developed from the information contained in the Scopus database (Elsevier BV). These indicators can be used to assess and analyze scientific domains.The platform takes its name from the SCImago Journal Rank (SJR) indicator, developed by SCImago from the widely known algorithm Google PageRank. This indicator shows the visibility of the journals contained in the Scopus database from 1996.",
+        "description": "The SCImago Journal & Country Rank is a portal that includes the journals and country scientific indicators developed from the information contained in the Scopus database (Elsevier BV). These indicators can be used to assess and analyze scientific domains. The platform takes its name from the SCImago Journal Rank (SJR) indicator, developed by SCImago from the widely known algorithm Google PageRank. This indicator shows the visibility of the journals contained in the Scopus database from 1996.",
         "disciplines": [
             "All"
         ],
@@ -1654,7 +1642,7 @@
         "access": "",
         "url": "https://books.open.tudelft.nl/",
         "keywords": "Scientific research",
-        "description": "TU Delft OPEN Publishing publishes monographs, edited books, (interactive) textbooks, and conference books across a wide range of disciplines, including applied sciences, civil engineering, geosciences, electrical engineering, mathematics, computer science, industrial design engineering, mechanical engineering, technology, policy and management, aerospace engineering, and architecture and the built environment. Publications are offered under the \"diamond open access\" model, ensuring they are free to read and incur no costs for authors. To submit a book proposal or find more information, please consult the Information for Authors and Editors page or directly contact TU Delft OPEN Publishing.",
+        "description": "Open access catalogue of monographs, edited books, (interactive) textbooks and conference books published by TU Delft OPEN Publishing, the university press of TU Delft. All content is freely accessible, with no publishing fees, supporting open science and responsible research practices.",
         "disciplines": [
             "All"
         ],
@@ -1665,7 +1653,7 @@
         "access": "",
         "url": "https://journals.open.tudelft.nl/",
         "keywords": "Scientific research",
-        "description": "TU Delft OPEN Journals is the university’s Diamond Open Access publishing platform, offering a growing list of peer-reviewed journals across disciplines. It includes journals on topics such as engineering, architecture, urbanism, coastal studies, aviation, and safety science. All content is freely accessible, with no publishing fees, supporting open science and responsible research practices. This platform provides researchers with a primary venue for sharing high-quality, interdisciplinary work while promoting open access to knowledge. For those interested in establishing a new publication, inquiries about starting a new Diamond OA journal are welcome.",
+        "description": "Open access catalogue of peer reviewed journals published by TU Delft OPEN Publishing, the university press of TU Delft. It includes journals on topics such as engineering, architecture, urbanism, coastal studies, aviation, and safety science. All content is freely accessible, with no publishing fees, supporting open science and responsible research practices.",
         "disciplines": [
             "All"
         ],
@@ -1676,7 +1664,7 @@
         "access": "",
         "url": "https://repository.tudelft.nl/",
         "keywords": "Scientific research; Writing and reporting",
-        "description": "The TU Delft Repository hosts academic outputs and digital assets in research and educational domains. It serves as a platform for TU Delft's diverse scholarly work, adhering to Open Access principles to promote accessibility, transparency, and collaboration in academic research. The repository includes a wide range of document types, such as journal articles, conference papers, reports, books, book chapters, reviews, as well as doctoral, master's, and bachelor's theses and student reports. It provides a public interface focused on quality, societal relevance, and impact, facilitated by moderated keywords and curated themes. Content from the Heritage domain is under evaluation for inclusion by 2025, while previous Heritage collection content has been archived. The following former collections are included: Aerospace Reports, Hydraulic Reports, and Geoscience Reports.",
+        "description": "The TU Delft Repository is a digital repository for TU Delft’s research, providing access to a wide range of scholarly outputs, including peer-reviewed articles, technical reports, working papers, and bachelor and master theses. It serves as a platform for disseminating TU Delft’s research in line with Open Access principles, promoting accessibility, transparency, and collaboration in academic research. The repository offers a public interface focused on quality and societal relevance and impact, supported by moderated keywords and curated themes. Its purpose is to provide a sustainable, stable, and central location for files and metadata, ensuring access to these resources for both people and machines.",
         "disciplines": [
             "All"
         ],
@@ -1731,7 +1719,7 @@
         "access": "",
         "url": "https://surfconext.vandale.nl/api/zoeken/managesurfconextprocess",
         "keywords": "Language",
-        "description": "Online access to a wide range of Van Dale dictionaries: Groot Woordenboek der Nederlandse Taal (\"Dikke Van Dale\", unabridged Dutch dictionary); Van Dale Nederlands Woordenboek (standard Dutch dictionary); Handboek Nederlands (Handbook Dutch); and Van Dale bilingual bidirectional databases: Nederlands-Engels (Dutch-English), Nederlands-Frans (Dutch-French), Nederlands-Duits (Dutch-German), Nederlands-Spaans (Dutch-Spanish), Nederlands-Italiaans (Dutch-Italian), Nederlands-Portugees (Dutch-Portuguese); Nederlands-Zweeds (Dutch-Swedish).",
+        "description": "Online access to a wide range of Van Dale dictionaries, including the Groot Woordenboek der Nederlandse Taal (\"Dikke Van Dale\", unabridged Dutch dictionary) and Van Dale Nederlands (standard Dutch dictionary). The platform also features a dictionary for Synoniemen (synonyms) and a Spellinghulp (spelling assistant). Additionally, it provides access to bilingual bidirectional databases for Engels (English), Frans (French), and Duits (German).",
         "disciplines": [
             "All"
         ],
