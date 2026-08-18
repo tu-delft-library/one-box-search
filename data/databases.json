@@ -525,7 +525,7 @@
         "disciplines": [
             "All"
         ],
-        "type": "articles"
+        "type": "patent information"
     },
     {
         "title": "Dimensions",
@@ -536,7 +536,7 @@
         "disciplines": [
             "All"
         ],
-        "type": "patent information"
+        "type": "articles"
     },
     {
         "title": "DINOloket",
@@ -1035,7 +1035,7 @@
     },
     {
         "title": "NEN Connect: Dutch Accepted Standards",
-        "access": "TU Delft provides access to the complete NEN Dutch Accepted Standards (Nederlands Aanvaard) collection. Log in with your NETID via SURFconext. Two-factor authentication (2FA) is required to ensure secure access.",
+        "access": "TU Delft provides access to the complete NEN Dutch Accepted Standards (Nederlands Aanvaard) collection. Log in with your NETID via SURFconext. Two-factor authentication (2FA) is required to ensure secure access. Please download only what you need. Download sparingly.",
         "url": "https://connect.nen.nl/Account/SSO/SURFconext",
         "keywords": "Standardisation",
         "description": "NEN Connect is an online database managed by the Royal Netherlands Standardization Institute. It provides access to all Dutch standards (NEN), European (EN), and international standards (ISO, IEC) accepted in the Netherlands. TU Delft provides access to the complete NEN Dutch Accepted Standards (Nederlands Aanvaard) collection. Log in with your NETID via SURFconext. Two-factor authentication (2FA) is required to ensure secure access.",
@@ -1043,6 +1043,17 @@
             "All"
         ],
         "type": "standards"
+    },
+    {
+        "title": "Netherlands Regulatory Framework (NeRF) - Maritime",
+        "access": "",
+        "url": "https://puc.overheid.nl/nsi/",
+        "keywords": "Ships and special craft; Naval architecture; Legislation; Shipping and ship control",
+        "description": "The Netherlands Regulatory Framework for Maritime is a digital regulatory database maintained by the Netherlands Shipping Inspectorate that serves as the official repository for maritime shipping rules and compliance standards. It covers maritime engineering, naval architecture, marine safety, and shipping law. The database indexes international conventions from organisations like the International Maritime Organisation and International Labour Organisation, alongside European legislation, national acts, mandatory resolutions, policy rules, and circulars governing vessels flying the Dutch flag. The platform allows users to systematically navigate maritime requirements by tracking statutory regulations, technical guidelines, and shipping inspectorate decisions. Key features include targeted thematic search options, direct structural mappings of international standards to specific Dutch legal provisions, automatic daily email updates on framework changes, and permanent links for stable document citation. This digital resource enables naval architects, shipbuilders, shipowners, and operators to efficiently verify international and domestic compliance with safety, environmental, and crew manning legislation.",
+        "disciplines": [
+            "Maritime Engineering"
+        ],
+        "type": "reference"
     },
     {
         "title": "Nexis Uni",
@@ -1157,7 +1168,7 @@
         "disciplines": [
             "All"
         ],
-        "type": "educational resource"
+        "type": "reference"
     },
     {
         "title": "Open Educational Resources",
@@ -1168,7 +1179,7 @@
         "disciplines": [
             "All"
         ],
-        "type": "reference"
+        "type": "educational resource"
     },
     {
         "title": "OpenAIRE",
@@ -1308,7 +1319,7 @@
     {
         "title": "PubChem",
         "access": "",
-        "url": "https://pubchem.ncbi.nlm.nih.gov/search/search.cgi",
+        "url": "https://pubchem-ncbi-nlm-nih-gov.tudelft.idm.oclc.org/",
         "keywords": "Chemical technology; Chemistry; Biochemistry; Biotechnology",
         "description": "PubChem provides information on the biological activities of small molecules. PubChem includes substance information, compound structures, and BioActivity data in three primary databases, Pcsubstance, Pccompound, and PCBioAssay, respectively. Pcsubstance contains more than 129 million records. Pccompound contains more than 49 million unique structures. PCBioAssay contains more than 739,000 BioAssays. Each BioAssay contains a various number of data points. The Substance/Compound database, where possible, provides links to BioAssay description, literature, references, and assay data points. The BioAssay database also includes links back to the Substance/Compound database. PubChem is integrated with Entrez, NCBI's primary search engine, and also provides compound neighboring, sub/superstructure, similarity structure, BioActivity data, and other searching features. PubChem contains substance and BioAssay information from a multitude of depositors.",
         "disciplines": [
