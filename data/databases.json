@@ -1035,7 +1035,7 @@
     },
     {
         "title": "NEN Connect: Dutch Accepted Standards",
-        "access": "TU Delft provides access to the complete NEN Dutch Accepted Standards (Nederlands Aanvaard) collection. Log in with your NETID via SURFconext. Two-factor authentication (2FA) is required to ensure secure access. Please download only what you need. Download sparingly.",
+        "access": "TU Delft provides access to the complete NEN Dutch Accepted Standards (Nederlands Aanvaard) collection. Log in with your NETID via SURFconext. Two-factor authentication (2FA) is required to ensure secure access.",
         "url": "https://connect.nen.nl/Account/SSO/SURFconext",
         "keywords": "Standardisation",
         "description": "NEN Connect is an online database managed by the Royal Netherlands Standardization Institute. It provides access to all Dutch standards (NEN), European (EN), and international standards (ISO, IEC) accepted in the Netherlands. TU Delft provides access to the complete NEN Dutch Accepted Standards (Nederlands Aanvaard) collection. Log in with your NETID via SURFconext. Two-factor authentication (2FA) is required to ensure secure access.",
