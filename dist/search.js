@@ -240,11 +240,14 @@ var providers_default = [
               if (!generalFormat)
                 return;
               const type = worldcat_types_default[generalFormat];
-              const specificType = type.children[specificFormat];
-              if (specificType) {
-                return specificType?.label;
+              if (type) {
+                const specificType = type.children[specificFormat];
+                if (specificType) {
+                  return specificType?.label;
+                }
+                return type?.label;
               }
-              return type?.label;
+              return generalFormat;
             };
             const normalizedResults = results.briefRecords.slice(0, displayCount).map((d) => ({
               id: d.oclcNumber.toString(),

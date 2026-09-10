@@ -51,11 +51,14 @@ export default [
             ) {
               if (!generalFormat) return undefined;
               const type = worldCatObjectTypes[generalFormat];
-              const specificType = type.children[specificFormat];
-              if (specificType) {
-                return specificType?.label as string;
+              if (type) {
+                const specificType = type.children[specificFormat];
+                if (specificType) {
+                  return specificType?.label as string;
+                }
+                return type?.label as string;
               }
-              return type?.label as string;
+              return generalFormat
             }
             const normalizedResults: NormalizedResults = results.briefRecords
               .slice(0, displayCount)
